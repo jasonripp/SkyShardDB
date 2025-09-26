@@ -1,0 +1,264 @@
+import { useMemo } from 'react';
+import {
+    MaterialReactTable,
+    useMaterialReactTable,
+    type MRT_ColumnDef,
+} from 'material-react-table';
+import { useQuery } from '@tanstack/react-query';
+
+export type Unit = {
+    ID: number;
+    Name: string;
+    Info: string;
+    InShop: boolean;
+    Conditional: number[];
+    Rarity: number;
+    Health: number;
+    HasDamage: boolean;
+    Damage: number;
+    HasSpeed: boolean;
+    AttackSpeed: number;
+    length_x: number;
+    length_y: number;
+    PermanentDestroy: boolean;
+    DamageType: number;
+    DamageTypeBonus: number;
+    SpecialDamageType: number;
+    Targeting: number;
+    ProjectileSpeed: number;
+    ValueNames: string[];
+    Values: number[];
+    CustomValues: { [key: string]: number }[];
+    Sprite: string;
+    Projectile: string;
+    Laser: boolean;
+    Type: number;
+    Role: number;
+    Faction: number;
+};
+
+const defaultUnit: Unit = {
+    ID: 0,
+    Name: '',
+    Info: '',
+    InShop: false,
+    Conditional: [],
+    Rarity: 0,
+    Health: 0,
+    HasDamage: false,
+    Damage: 0,
+    HasSpeed: false,
+    AttackSpeed: 0,
+    length_x: 0,
+    length_y: 0,
+    PermanentDestroy: false,
+    DamageType: 0,
+    DamageTypeBonus: 0,
+    SpecialDamageType: 0,
+    Targeting: 0,
+    ProjectileSpeed: 0,
+    ValueNames: [],
+    Values: [],
+    CustomValues: [],
+    Sprite: '',
+    Projectile: '',
+    Laser: false,
+    Type: 0,
+    Role: 0,
+    Faction: 0,
+};
+
+const unitKeys = Object.keys(defaultUnit);
+
+const fetchUnitData = async () => {
+    try {
+        const response = await fetch('https://raw.githubusercontent.com/ItsBen321/SkyShard-Public/refs/heads/main/game_info/unit_data.JSON');
+        if (!response.ok) throw new Error('Remote fetch failed');
+        return response.json();
+    } catch (e) {
+        // Fallback to local file
+        const localResponse = await fetch('/game_info/unit_data.JSON');
+        if (!localResponse.ok) throw new Error('Local fetch failed');
+        return localResponse.json();
+    }
+};
+
+// Utility: Parse hint string and get label for value
+function getHintLabel(hint: string, value: number | string): string {
+    if (!hint) return String(value ?? "");
+    const map: Record<string, string> = {};
+    hint.split(',').forEach(pair => {
+        const [label, val] = pair.split(':');
+        if (label && val !== undefined) map[val.trim()] = label.trim();
+    });
+    return map[String(value)] ?? String(value ?? "");
+}
+
+const UnitTable = () => {
+    const { data, isLoading, error } = useQuery({
+        queryKey: ['unitData'],
+        queryFn: fetchUnitData,
+    });
+
+    const formattedData: Unit[] = useMemo(() => {
+        if (!data) return [];
+        return data.map((unitArr: any[]) => {
+            const unitObj: Partial<Unit & Record<string, any>> = {};
+            unitArr.forEach((property) => {
+                if (
+                    property.var &&
+                    property.value !== undefined &&
+                    unitKeys.includes(property.var)
+                ) {
+                    unitObj[property.var] = property.value;
+                    // If there's a hint, store it as `${var}_hint`
+                    if (property.hint) {
+                        unitObj[`${property.var}_hint`] = property.hint;
+                    }
+                }
+            });
+            // Fill missing fields with defaults
+            unitKeys.forEach((key) => {
+                if (unitObj[key] === undefined) {
+                    unitObj[key] = defaultUnit[key as keyof Unit];
+                }
+            });
+            return unitObj as Unit;
+        });
+    }, [data]);
+
+    const filterOptions = useMemo(() => {
+        // Helper to get options for a key
+        const getOptions = (
+            key: keyof Unit,
+            hintKey?: string,
+            labelFn?: (val: any, hint?: string) => string
+        ) => {
+            const values = Array.from(new Set(formattedData.map(u => u[key])));
+            const opts = values.map(val => {
+                const unitWithValue = formattedData.find(u => u[key] === val);
+                const hint = hintKey && unitWithValue ? (unitWithValue as any)[hintKey] || "" : "";
+                return {
+                    value: val,
+                    label: labelFn ? labelFn(val, hint) : getHintLabel(hint, typeof val === 'string' || typeof val === 'number' ? val : String(val)),
+                };
+            }).sort((a, b) => {
+                // Numeric sort if both are numbers, otherwise string sort
+                if (typeof a.value === 'number' && typeof b.value === 'number') {
+                    return a.value - b.value;
+                }
+                return String(a.value).localeCompare(String(b.value));
+            });
+            return opts;
+        };
+        return {
+            Faction: getOptions('Faction', 'Faction_hint'),
+            Type: getOptions('Type', 'Type_hint'),
+            Role: getOptions('Role', 'Role_hint'),
+            Rarity: getOptions('Rarity', undefined, (val) => `Tier ${val}`),
+        };
+    }, [formattedData]);
+
+    const multiSelectFilterFn = (row: any, columnId: string, filterValues: any[]) => {
+        if (!filterValues || filterValues.length === 0) return true;
+        return filterValues.includes(row.getValue(columnId));
+    }
+    
+
+    const columns = useMemo<MRT_ColumnDef<Unit>[]>(
+        () => [
+            {
+                accessorKey: 'ID',
+                header: 'ID',
+                enableColumnFilter: false,
+                size: 10,
+            },
+            {
+                accessorKey: 'Name',
+                header: 'Name',
+                size: 180,
+            },
+            {
+                accessorKey: 'Info',
+                header: 'Info',
+                filterFn: 'contains',
+                size: 300,
+                grow: true,
+            },
+            {
+                accessorKey: 'Rarity',
+                header: 'Rarity',
+                filterVariant: 'multi-select',
+                Cell: ({ row }) => `Tier ${row.original.Rarity}`,
+                filterSelectOptions: filterOptions.Rarity,
+                filterFn: multiSelectFilterFn,
+                size: 50,
+            },
+            {
+                accessorKey: 'Faction',
+                header: 'Faction',
+                filterVariant: 'multi-select',
+                Cell: ({ row }) => getHintLabel((row.original as any)['Faction_hint'] || "", row.original.Faction),
+                filterSelectOptions: filterOptions.Faction,
+                filterFn: multiSelectFilterFn,
+                size: 50,
+            },
+            {
+                accessorKey: 'Role',
+                header: 'Role',
+                filterVariant: 'multi-select',
+                Cell: ({ row }) => getHintLabel((row.original as any)['Role_hint'] || "", row.original.Role),
+                filterSelectOptions: filterOptions.Role,
+                filterFn: multiSelectFilterFn,
+                size: 50,
+            },
+            {
+                accessorKey: 'Type',
+                header: 'Type',
+                filterVariant: 'multi-select',
+                Cell: ({ row }) => getHintLabel((row.original as any)['Type_hint'] || "", row.original.Type),
+                filterSelectOptions: filterOptions.Type,
+                filterFn: multiSelectFilterFn,
+                size: 50,
+            },
+        ],
+        [formattedData, filterOptions],
+    );
+
+    const table = useMaterialReactTable({
+        columns,
+        data: formattedData,
+        enableFacetedValues: true,
+        enablePagination: false,
+        // isMultiSortEvent: () => true,
+        // maxMultiSortColCount: 2,
+        initialState: {
+            showColumnFilters: true,
+            sorting: [
+                {
+                    id: 'Rarity',
+                    desc: false,
+                },
+                {
+                    id: 'Faction',
+                    desc: false,
+                },
+                {
+                    id: 'Role',
+                    desc: false
+                },
+                {
+                    id: 'Type',
+                    desc: false
+                }
+            ],
+        },
+    });
+
+    if (isLoading) return <div>Loading...</div>;
+    if (error) return <div>Error loading data</div>;
+
+    return <MaterialReactTable table={table} />;
+};
+
+export default UnitTable;
