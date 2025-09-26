@@ -69,7 +69,6 @@ const PatchInfo = () => {
 
     return (
         <React.Fragment>
-            <Box><CircularProgress /></Box>
             <p className="version">
                 Current game version: <Button onClick={handleClickOpen}>{patchData?.Patch}</Button>
             </p>
