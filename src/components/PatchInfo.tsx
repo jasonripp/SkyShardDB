@@ -6,8 +6,7 @@ import { useQuery } from '@tanstack/react-query';
 
 import { styled } from '@mui/material/styles';
 import CloseIcon from '@mui/icons-material/Close';
-import { Button, IconButton, Dialog, DialogTitle, DialogContent, DialogActions, } from '@mui/material';
-
+import { Button, IconButton, Dialog, DialogTitle, DialogContent, DialogActions, CircularProgress, Box, } from '@mui/material';
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
     '& .MuiDialogContent-root': {
@@ -65,11 +64,12 @@ const PatchInfo = () => {
         enabled: !!patchData?.Patch,
     });
 
-    if (isLoading) return <div>Loading...</div>;
+    if (isLoading) return <CircularProgress />;
     if (error) return <div>Error loading data</div>;
 
     return (
         <React.Fragment>
+            <Box><CircularProgress /></Box>
             <p className="version">
                 Current game version: <Button onClick={handleClickOpen}>{patchData?.Patch}</Button>
             </p>
@@ -94,9 +94,11 @@ const PatchInfo = () => {
                     <CloseIcon />
                 </IconButton>
                 <DialogContent dividers>
-                    <Markdown remarkPlugins={[remarkGfm]}>
-                        {patchNotesError ? "Error loading patch notes" : isPatchNotesLoading ? "Loading..." : patchNotes || "No patch notes available."}
-                    </Markdown>
+                    {isPatchNotesLoading ? <Box><CircularProgress /></Box> : (
+                        <Markdown remarkPlugins={[remarkGfm]}>
+                            {patchNotesError ? "Error loading patch notes" : patchNotes || "No patch notes available."}
+                        </Markdown>
+                    )}
                 </DialogContent>
                 <DialogActions>
                     <Button autoFocus onClick={handleClose}>

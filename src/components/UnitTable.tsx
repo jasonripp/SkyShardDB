@@ -5,6 +5,7 @@ import {
     type MRT_ColumnDef,
 } from 'material-react-table';
 import { useQuery } from '@tanstack/react-query';
+import { Box, CircularProgress } from '@mui/material';
 
 export type Unit = {
     ID: number;
@@ -261,7 +262,7 @@ const UnitTable = () => {
         },
     });
 
-    if (isLoading) return <div>Loading...</div>;
+    if (isLoading) return <Box><CircularProgress /></Box>;
     if (error) return <div>Error loading data</div>;
 
     return <MaterialReactTable table={table} />;
