@@ -230,10 +230,16 @@ const UnitTable = () => {
         data: formattedData,
         enableFacetedValues: true,
         enablePagination: false,
-        // isMultiSortEvent: () => true,
-        // maxMultiSortColCount: 2,
+        // positionGlobalFilter: 'left',
+        enableStickyHeader: true,
+        enableStickyFooter: true,
+        muiTableContainerProps: { sx: { maxHeight: '80vh' } },
         initialState: {
+            columnVisibility:{
+                ID: false,
+            },
             showColumnFilters: true,
+            showGlobalFilter: true,
             sorting: [
                 {
                     id: 'Rarity',
