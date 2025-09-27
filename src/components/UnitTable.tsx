@@ -299,7 +299,14 @@ const UnitTable = () => {
                 cursor: 'pointer', 
             },
         }),
-        muiTableContainerProps: { sx: { maxHeight: '80vh' } },
+        muiTableContainerProps: { 
+            sx: { 
+                flex: '1 1 auto', 
+                minHeight: 0,
+                maxHeight: 'calc(100vh - 300px)',
+                overflow: 'auto',
+            }
+        },
         initialState: {
             columnVisibility:{
                 ID: false,
@@ -362,6 +369,8 @@ const UnitTable = () => {
                                     src={`images/units/unit_${String(selectedUnit.ID).padStart(3, '0')}.png`}
                                     alt={selectedUnit.Name}
                                     style={{
+                                        width: '100%',
+                                        height: 'auto',
                                         maxWidth: 400,
                                         maxHeight: 400,
                                         objectFit: 'contain',

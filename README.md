@@ -1,7 +1,7 @@
-![SkyShard Logo](images/LogoBlack.png)
+![SkyShard Logo](public/images/LogoBlack.png)
 # SkyShard DataBase
 
-This is a collection of fan-made databases, tools and information for the game SkyShard
+This is a collection of fan-made databases, tools and information for the game SkyShard.
 
 Visit the game's Steam Page to try out the free demo and wishlist it:
 [Project SkyShard](https://store.steampowered.com/app/3892910/Project_SkyShard/) 
@@ -12,7 +12,7 @@ Visit the game's Steam Page to try out the free demo and wishlist it:
 - **unit details** - ability to click on any unit to see detailed info
 
 ## WIP
-- **unit details** - exand unit details
+- **unit details** - expand unit details
 - **styles** - clean up the look and feel of the page
 
 ## TBD 
