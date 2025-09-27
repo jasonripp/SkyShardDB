@@ -1,3 +1,4 @@
+![SkyShard Logo](images/LogoBlack.png)
 # SkyShard DataBase
 
 This is a collection of fan-made databases, tools and information for the game SkyShard
@@ -7,13 +8,14 @@ Visit the game's Steam Page to try out the free demo and wishlist it:
 
 ## Features
 - **Unit Database** - a sortable and filterable table of all units in the game
-
-## WIP
 - **sprites** - images for every unit
 - **unit details** - ability to click on any unit to see detailed info
+
+## WIP
+- **unit details** - exand unit details
 - **styles** - clean up the look and feel of the page
 
-## Future 
+## TBD 
 - **Library view** - mimick the ingame library for a more mobile friendly experience
-- **FAQ?** - general FAQ for the game
-- **wiki?** - more in depth knowledge for the game
+- **FAQ** - general FAQ for the game
+- **wiki** - more in depth knowledge for the game

@@ -5,8 +5,17 @@ import remarkGfm from 'remark-gfm';
 import { useQuery } from '@tanstack/react-query';
 
 import { styled } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import CircularProgress from '@mui/material/CircularProgress';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogTitle from '@mui/material/DialogTitle';
+import IconButton from '@mui/material/IconButton';
+import Link from '@mui/material/Link';
+import Typography from '@mui/material/Typography';
 import CloseIcon from '@mui/icons-material/Close';
-import { Button, IconButton, Dialog, DialogTitle, DialogContent, DialogActions, CircularProgress, Box, } from '@mui/material';
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
     '& .MuiDialogContent-root': {
@@ -69,9 +78,9 @@ const PatchInfo = () => {
 
     return (
         <React.Fragment>
-            <p className="version">
-                Current game version: <Button onClick={handleClickOpen}>{patchData?.Patch}</Button>
-            </p>
+            <Typography variant='body2' gutterBottom>
+                Game version: {patchData?.Patch} - <Link component="button" onClick={handleClickOpen}>Patch Notes</Link>
+            </Typography>
             <BootstrapDialog
                 onClose={handleClose}
                 aria-labelledby="customized-dialog-title"

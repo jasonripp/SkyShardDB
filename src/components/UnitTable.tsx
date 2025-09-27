@@ -5,8 +5,17 @@ import {
     type MRT_ColumnDef,
 } from 'material-react-table';
 import { useQuery } from '@tanstack/react-query';
+
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import CircularProgress from '@mui/material/CircularProgress';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogTitle from '@mui/material/DialogTitle';
+import IconButton from '@mui/material/IconButton';
+import Typography from '@mui/material/Typography';
 import CloseIcon from '@mui/icons-material/Close';
-import { Box, CircularProgress, Dialog, DialogTitle, DialogContent, DialogActions, Button, IconButton, Typography } from '@mui/material';
 
 export type Unit = {
     ID: number;
@@ -104,6 +113,7 @@ const UnitTable = () => {
 
     const [dialogOpen, setDialogOpen] = useState(false);
     const [selectedUnit, setSelectedUnit] = useState<Unit | null>(null);
+    const [unitImgLoading, setUnitImgLoading] = useState(true);
 
     const handleRowClick = (row: any) => {
         setSelectedUnit(row.original);
@@ -113,6 +123,7 @@ const UnitTable = () => {
     const handleDialogClose = () => {
         setDialogOpen(false);
         setSelectedUnit(null);
+        setUnitImgLoading(true);
     };
 
     const formattedData: Unit[] = useMemo(() => {
@@ -192,24 +203,34 @@ const UnitTable = () => {
                 id: 'Image',
                 header: 'Image',
                 columnDefType: 'display',
-                Cell: ({ row }) => (
-                    // <img src={`images/units/unit_${String(row.original.ID).padStart(3, '0')}.png`} alt={row.original.Name} style={{ width: 50, height: 50 }} onError={(e) => { (e.target as HTMLImageElement).src = 'images/units/placeholder.png'; }} />
-                    <img
-                        src={`images/units/unit_${String(row.original.ID).padStart(3, '0')}.png`}
-                        alt={row.original.Name}
-                        style={{
-                            width: 50,
-                            height: 50,
-                            objectFit: 'contain', // maintains aspect ratio
-                            aspectRatio: '1 / 1', // ensures square cell
-                            // background: '#2222', // optional: subtle background for transparency
-                            display: 'block',
-                        }}
-                        onError={(e) => {
-                            (e.target as HTMLImageElement).src = 'images/units/placeholder.png';
-                        }}
-                    />
-                ),
+                Cell: ({ row }) => {
+                    const [imgLoading, setImgLoading] = useState(true);
+                    return (
+                        <Box sx={{width: 50}}>
+                            {imgLoading && (
+                                <CircularProgress
+                                    size={32}
+                                />
+                            )}
+                            <img
+                                src={`images/units/sm/unit_${String(row.original.ID).padStart(3, '0')}.png`}
+                                alt={row.original.Name}
+                                style={{
+                                    width: 50,
+                                    height: 50,
+                                    objectFit: 'contain', // maintains aspect ratio
+                                    aspectRatio: '1 / 1', // ensures square cell
+                                    display: imgLoading ? 'none' : 'block',
+                                }}
+                                onLoad={() => setImgLoading(false)}
+                                onError={(e) => {
+                                    (e.target as HTMLImageElement).src = 'images/units/sm/placeholder.png';
+                                    setImgLoading(false);
+                                }}
+                            />
+                        </Box>
+                    );
+                },
                 size: 50,
             },
             {
@@ -332,21 +353,26 @@ const UnitTable = () => {
                     {selectedUnit && (
                         <Box>
                             <Box sx={{ mb: 2, textAlign: 'center' }}>
+                                {unitImgLoading && (
+                                    <CircularProgress
+                                        size={64}
+                                    />
+                                )}
                                 <img
                                     src={`images/units/unit_${String(selectedUnit.ID).padStart(3, '0')}.png`}
                                     alt={selectedUnit.Name}
                                     style={{
                                         maxWidth: 400,
                                         maxHeight: 400,
-                                        // width: '100%',
-                                        // height: 'auto',
                                         objectFit: 'contain',
                                         aspectRatio: '1 / 1',
-                                        display: 'block',
+                                        display: unitImgLoading ? 'none' : 'block',
                                         margin: '0 auto',
                                     }}
+                                    onLoad={() => setUnitImgLoading(false)}
                                     onError={(e) => {
                                         (e.target as HTMLImageElement).src = 'images/units/placeholder.png';
+                                        setUnitImgLoading(false);
                                     }}
                                 />
                             </Box>

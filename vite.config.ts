@@ -5,4 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: '/SkyShardDB/',
+  define: {
+    'import.meta.env.VITE_APP_BUILD_DATE': JSON.stringify(new Date().toISOString()),
+  }
 })
