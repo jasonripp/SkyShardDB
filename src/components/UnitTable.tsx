@@ -89,7 +89,7 @@ const fetchUnitData = async () => {
 };
 
 // Utility: Parse hint string and get label for value
-function getHintLabel(hint: string, value: number | string): string {
+export function getHintLabel(hint: string, value: number | string): string {
     if (!hint) return String(value ?? "");
     const map: Record<string, string> = {};
     hint.split(',').forEach(pair => {
