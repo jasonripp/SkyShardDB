@@ -1,11 +1,12 @@
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import {
     MaterialReactTable,
     useMaterialReactTable,
     type MRT_ColumnDef,
 } from 'material-react-table';
 import { useQuery } from '@tanstack/react-query';
-import { Box, CircularProgress } from '@mui/material';
+import CloseIcon from '@mui/icons-material/Close';
+import { Box, CircularProgress, Dialog, DialogTitle, DialogContent, DialogActions, Button, IconButton, Typography } from '@mui/material';
 
 export type Unit = {
     ID: number;
@@ -101,6 +102,19 @@ const UnitTable = () => {
         queryFn: fetchUnitData,
     });
 
+    const [dialogOpen, setDialogOpen] = useState(false);
+    const [selectedUnit, setSelectedUnit] = useState<Unit | null>(null);
+
+    const handleRowClick = (row: any) => {
+        setSelectedUnit(row.original);
+        setDialogOpen(true);
+    };
+
+    const handleDialogClose = () => {
+        setDialogOpen(false);
+        setSelectedUnit(null);
+    };
+
     const formattedData: Unit[] = useMemo(() => {
         if (!data) return [];
         return data.map((unitArr: any[]) => {
@@ -175,6 +189,30 @@ const UnitTable = () => {
                 size: 10,
             },
             {
+                id: 'Image',
+                header: 'Image',
+                columnDefType: 'display',
+                Cell: ({ row }) => (
+                    // <img src={`images/units/unit_${String(row.original.ID).padStart(3, '0')}.png`} alt={row.original.Name} style={{ width: 50, height: 50 }} onError={(e) => { (e.target as HTMLImageElement).src = 'images/units/placeholder.png'; }} />
+                    <img
+                        src={`images/units/unit_${String(row.original.ID).padStart(3, '0')}.png`}
+                        alt={row.original.Name}
+                        style={{
+                            width: 50,
+                            height: 50,
+                            objectFit: 'contain', // maintains aspect ratio
+                            aspectRatio: '1 / 1', // ensures square cell
+                            // background: '#2222', // optional: subtle background for transparency
+                            display: 'block',
+                        }}
+                        onError={(e) => {
+                            (e.target as HTMLImageElement).src = 'images/units/placeholder.png';
+                        }}
+                    />
+                ),
+                size: 50,
+            },
+            {
                 accessorKey: 'Name',
                 header: 'Name',
                 size: 180,
@@ -234,6 +272,12 @@ const UnitTable = () => {
         // positionGlobalFilter: 'left',
         enableStickyHeader: true,
         enableStickyFooter: true,
+        muiTableBodyRowProps: ({ row }) => ({
+            onClick: () => handleRowClick(row),
+            sx: {
+                cursor: 'pointer', 
+            },
+        }),
         muiTableContainerProps: { sx: { maxHeight: '80vh' } },
         initialState: {
             columnVisibility:{
@@ -265,7 +309,62 @@ const UnitTable = () => {
     if (isLoading) return <Box><CircularProgress /></Box>;
     if (error) return <div>Error loading data</div>;
 
-    return <MaterialReactTable table={table} />;
+    return (
+        <>
+            <MaterialReactTable table={table} />
+            <Dialog open={dialogOpen} onClose={handleDialogClose} maxWidth="sm" fullWidth>
+                <DialogTitle>
+                    {selectedUnit?.Name || 'Unit Details'}
+                </DialogTitle>
+                <IconButton
+                    aria-label="close"
+                    onClick={handleDialogClose}
+                    sx={(theme) => ({
+                        position: 'absolute',
+                        right: 8,
+                        top: 8,
+                        color: theme.palette.grey[500],
+                    })}
+                >
+                    <CloseIcon />
+                </IconButton>
+                <DialogContent dividers>
+                    {selectedUnit && (
+                        <Box>
+                            <Box sx={{ mb: 2, textAlign: 'center' }}>
+                                <img
+                                    src={`images/units/unit_${String(selectedUnit.ID).padStart(3, '0')}.png`}
+                                    alt={selectedUnit.Name}
+                                    style={{
+                                        maxWidth: 400,
+                                        maxHeight: 400,
+                                        // width: '100%',
+                                        // height: 'auto',
+                                        objectFit: 'contain',
+                                        aspectRatio: '1 / 1',
+                                        display: 'block',
+                                        margin: '0 auto',
+                                    }}
+                                    onError={(e) => {
+                                        (e.target as HTMLImageElement).src = 'images/units/placeholder.png';
+                                    }}
+                                />
+                            </Box>
+                            <Typography variant="body1"><strong>Info:</strong> {selectedUnit.Info}</Typography>
+                            <Typography variant="body2"><strong>Rarity:</strong> {selectedUnit.Rarity}</Typography>
+                            <Typography variant="body2"><strong>Faction:</strong> {selectedUnit.Faction}</Typography>
+                            <Typography variant="body2"><strong>Role:</strong> {selectedUnit.Role}</Typography>
+                            <Typography variant="body2"><strong>Type:</strong> {selectedUnit.Type}</Typography>
+                            {/* Add more fields as needed */}
+                        </Box>
+                    )}
+                </DialogContent>
+                <DialogActions>
+                    <Button autoFocus onClick={handleDialogClose}>Close</Button>
+                </DialogActions>
+            </Dialog>
+        </>
+    );
 };
 
 export default UnitTable;
