@@ -7,15 +7,9 @@ import {
 import { useQuery } from '@tanstack/react-query';
 
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import CircularProgress from '@mui/material/CircularProgress';
-import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogTitle from '@mui/material/DialogTitle';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import CloseIcon from '@mui/icons-material/Close';
+
+import UnitDialog from './UnitDialog';
 
 export type Unit = {
     ID: number;
@@ -113,7 +107,7 @@ const UnitTable = () => {
 
     const [dialogOpen, setDialogOpen] = useState(false);
     const [selectedUnit, setSelectedUnit] = useState<Unit | null>(null);
-    const [unitImgLoading, setUnitImgLoading] = useState(true);
+
 
     const handleRowClick = (row: any) => {
         setSelectedUnit(row.original);
@@ -123,7 +117,6 @@ const UnitTable = () => {
     const handleDialogClose = () => {
         setDialogOpen(false);
         setSelectedUnit(null);
-        setUnitImgLoading(true);
     };
 
     const formattedData: Unit[] = useMemo(() => {
@@ -189,7 +182,6 @@ const UnitTable = () => {
         if (!filterValues || filterValues.length === 0) return true;
         return filterValues.includes(row.getValue(columnId));
     }
-    
 
     const columns = useMemo<MRT_ColumnDef<Unit>[]>(
         () => [
@@ -206,7 +198,7 @@ const UnitTable = () => {
                 Cell: ({ row }) => {
                     const [imgLoading, setImgLoading] = useState(true);
                     return (
-                        <Box sx={{width: 50}}>
+                        <Box sx={{ width: 50 }}>
                             {imgLoading && (
                                 <CircularProgress
                                     size={32}
@@ -218,8 +210,8 @@ const UnitTable = () => {
                                 style={{
                                     width: 50,
                                     height: 50,
-                                    objectFit: 'contain', // maintains aspect ratio
-                                    aspectRatio: '1 / 1', // ensures square cell
+                                    objectFit: 'contain',
+                                    aspectRatio: '1 / 1',
                                     display: imgLoading ? 'none' : 'block',
                                 }}
                                 onLoad={() => setImgLoading(false)}
@@ -296,19 +288,19 @@ const UnitTable = () => {
         muiTableBodyRowProps: ({ row }) => ({
             onClick: () => handleRowClick(row),
             sx: {
-                cursor: 'pointer', 
+                cursor: 'pointer',
             },
         }),
-        muiTableContainerProps: { 
-            sx: { 
-                flex: '1 1 auto', 
+        muiTableContainerProps: {
+            sx: {
+                flex: '1 1 auto',
                 minHeight: 0,
                 maxHeight: 'calc(100vh - 300px)',
                 overflow: 'auto',
             }
         },
         initialState: {
-            columnVisibility:{
+            columnVisibility: {
                 ID: false,
             },
             showColumnFilters: true,
@@ -340,64 +332,9 @@ const UnitTable = () => {
     return (
         <>
             <MaterialReactTable table={table} />
-            <Dialog open={dialogOpen} onClose={handleDialogClose} maxWidth="sm" fullWidth>
-                <DialogTitle>
-                    {selectedUnit?.Name || 'Unit Details'}
-                </DialogTitle>
-                <IconButton
-                    aria-label="close"
-                    onClick={handleDialogClose}
-                    sx={(theme) => ({
-                        position: 'absolute',
-                        right: 8,
-                        top: 8,
-                        color: theme.palette.grey[500],
-                    })}
-                >
-                    <CloseIcon />
-                </IconButton>
-                <DialogContent dividers>
-                    {selectedUnit && (
-                        <Box>
-                            <Box sx={{ mb: 2, textAlign: 'center' }}>
-                                {unitImgLoading && (
-                                    <CircularProgress
-                                        size={64}
-                                    />
-                                )}
-                                <img
-                                    src={`images/units/unit_${String(selectedUnit.ID).padStart(3, '0')}.png`}
-                                    alt={selectedUnit.Name}
-                                    style={{
-                                        width: '100%',
-                                        height: 'auto',
-                                        maxWidth: 400,
-                                        maxHeight: 400,
-                                        objectFit: 'contain',
-                                        aspectRatio: '1 / 1',
-                                        display: unitImgLoading ? 'none' : 'block',
-                                        margin: '0 auto',
-                                    }}
-                                    onLoad={() => setUnitImgLoading(false)}
-                                    onError={(e) => {
-                                        (e.target as HTMLImageElement).src = 'images/units/placeholder.png';
-                                        setUnitImgLoading(false);
-                                    }}
-                                />
-                            </Box>
-                            <Typography variant="body1"><strong>Info:</strong> {selectedUnit.Info}</Typography>
-                            <Typography variant="body2"><strong>Rarity:</strong> {selectedUnit.Rarity}</Typography>
-                            <Typography variant="body2"><strong>Faction:</strong> {selectedUnit.Faction}</Typography>
-                            <Typography variant="body2"><strong>Role:</strong> {selectedUnit.Role}</Typography>
-                            <Typography variant="body2"><strong>Type:</strong> {selectedUnit.Type}</Typography>
-                            {/* Add more fields as needed */}
-                        </Box>
-                    )}
-                </DialogContent>
-                <DialogActions>
-                    <Button autoFocus onClick={handleDialogClose}>Close</Button>
-                </DialogActions>
-            </Dialog>
+            {dialogOpen && selectedUnit && (
+                <UnitDialog open={dialogOpen} onClose={handleDialogClose} unit={selectedUnit} />
+            )}
         </>
     );
 };
