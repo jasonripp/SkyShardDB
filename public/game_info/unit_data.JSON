@@ -186,13 +186,13 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371872907819346>",
+            "value": "<SpriteFrames#-9223371871750191442>",
             "var": "Sprite",
             "var_type": "Object"
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371872924596578>",
+            "value": "<SpriteFrames#-9223371871766968674>",
             "var": "Projectile",
             "var_type": "Object"
         },
@@ -607,7 +607,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371872404502781>",
+            "value": "<SpriteFrames#-9223371871246874877>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -637,7 +637,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371872672938242>",
+            "value": "<PackedScene#-9223371871515310338>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -739,7 +739,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371693425155752>",
+            "value": "<GDScript#-9223371692233973416>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -1019,13 +1019,13 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371871699859704>",
+            "value": "<SpriteFrames#-9223371870542231800>",
             "var": "Sprite",
             "var_type": "Object"
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371871716636919>",
+            "value": "<SpriteFrames#-9223371870559009015>",
             "var": "Projectile",
             "var_type": "Object"
         },
@@ -1043,7 +1043,7 @@
         },
         {
             "hint": "AudioStream",
-            "value": "<AudioStreamMP3#-9223371871968295163>",
+            "value": "<AudioStreamMP3#-9223371870810667259>",
             "var": "SFX",
             "var_type": "Object"
         },
@@ -1437,13 +1437,13 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371871129434367>",
+            "value": "<SpriteFrames#-9223371869971806463>",
             "var": "Sprite",
             "var_type": "Object"
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371871146211573>",
+            "value": "<SpriteFrames#-9223371869988583669>",
             "var": "Projectile",
             "var_type": "Object"
         },
@@ -1569,7 +1569,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371692250750630>",
+            "value": "<GDScript#-9223371691059568294>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -1855,7 +1855,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371870424791276>",
+            "value": "<SpriteFrames#-9223371869267163372>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -1885,7 +1885,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371870710003953>",
+            "value": "<PackedScene#-9223371869552376049>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -1987,7 +1987,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371691495775908>",
+            "value": "<GDScript#-9223371690304593572>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -2276,7 +2276,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371870055692521>",
+            "value": "<SpriteFrames#-9223371868898064617>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -2306,7 +2306,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371870710003953>",
+            "value": "<PackedScene#-9223371869552376049>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -2408,7 +2408,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371690254261925>",
+            "value": "<GDScript#-9223371689063079589>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -2694,7 +2694,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371869351049441>",
+            "value": "<SpriteFrames#-9223371868193421537>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -2724,7 +2724,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371869636262118>",
+            "value": "<PackedScene#-9223371868478634214>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -2826,7 +2826,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371688828198562>",
+            "value": "<GDScript#-9223371687637016226>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -3118,7 +3118,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371868981950686>",
+            "value": "<SpriteFrames#-9223371867824322782>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -3148,7 +3148,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371870710003953>",
+            "value": "<PackedScene#-9223371869552376049>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -3250,7 +3250,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371687737679523>",
+            "value": "<GDScript#-9223371686546497187>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -3536,7 +3536,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371867052570828>",
+            "value": "<SpriteFrames#-9223371865894942924>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -3668,7 +3668,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371686244507303>",
+            "value": "<GDScript#-9223371685053324967>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -3788,7 +3788,7 @@
         },
         {
             "hint": "",
-            "value": "Dynamite Turret",
+            "value": "Artillery Repeater",
             "var": "Name",
             "var_type": "String"
         },
@@ -3948,13 +3948,13 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371866482145498>",
+            "value": "<SpriteFrames#-9223371865324517594>",
             "var": "Sprite",
             "var_type": "Object"
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371866498922708>",
+            "value": "<SpriteFrames#-9223371865341294804>",
             "var": "Projectile",
             "var_type": "Object"
         },
@@ -4360,7 +4360,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371865962051783>",
+            "value": "<SpriteFrames#-9223371864804423879>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -4390,7 +4390,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371866247264459>",
+            "value": "<PackedScene#-9223371865089636555>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -4778,7 +4778,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371865190299840>",
+            "value": "<SpriteFrames#-9223371864032671936>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -4808,7 +4808,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371870710003953>",
+            "value": "<PackedScene#-9223371869552376049>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -4910,7 +4910,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371685556641441>",
+            "value": "<GDScript#-9223371684365459105>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -5196,7 +5196,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371864418547899>",
+            "value": "<SpriteFrames#-9223371863260919995>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -5226,7 +5226,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371869636262118>",
+            "value": "<PackedScene#-9223371868478634214>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -5328,7 +5328,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371684533231264>",
+            "value": "<GDScript#-9223371683342048928>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -5614,7 +5614,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371863646795958>",
+            "value": "<SpriteFrames#-9223371862489168054>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -5644,7 +5644,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371870710003953>",
+            "value": "<PackedScene#-9223371869552376049>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -5746,7 +5746,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371683509821087>",
+            "value": "<GDScript#-9223371682318638751>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -6032,7 +6032,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371863143479473>",
+            "value": "<SpriteFrames#-9223371861985851569>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -6062,7 +6062,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371863227365555>",
+            "value": "<PackedScene#-9223371862069737651>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -6164,7 +6164,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371682486410910>",
+            "value": "<GDScript#-9223371681295228574>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -6453,7 +6453,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371862539499692>",
+            "value": "<SpriteFrames#-9223371861381871788>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -6483,7 +6483,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371862623385767>",
+            "value": "<PackedScene#-9223371861465757863>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -6585,7 +6585,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371681513332381>",
+            "value": "<GDScript#-9223371680322150045>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -6871,7 +6871,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371861985851554>",
+            "value": "<SpriteFrames#-9223371860828223650>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -7003,7 +7003,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371680557031066>",
+            "value": "<GDScript#-9223371679365848730>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -7292,13 +7292,13 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371861415426207>",
+            "value": "<SpriteFrames#-9223371860257798303>",
             "var": "Sprite",
             "var_type": "Object"
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371861432203422>",
+            "value": "<SpriteFrames#-9223371860274575518>",
             "var": "Projectile",
             "var_type": "Object"
         },
@@ -7424,7 +7424,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371679651061403>",
+            "value": "<GDScript#-9223371678459879067>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -7710,7 +7710,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371861046327452>",
+            "value": "<SpriteFrames#-9223371859888699548>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -7740,7 +7740,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371870710003953>",
+            "value": "<PackedScene#-9223371869552376049>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -7842,7 +7842,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371678560542360>",
+            "value": "<GDScript#-9223371677369360024>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -7968,7 +7968,7 @@
         },
         {
             "hint": "",
-            "value": "When a friendly Tinker unit triggers, charge this +1. When at 16 Charge, trigger all friendly Tinker units and Stun them for 0.2s. Resets Charge.",
+            "value": "When a friendly Tinker unit triggers, charge this +1. When at 16 Charge, trigger all friendly Tinker units with a cooldown of 5 seconds or less. Resets Charge.",
             "var": "Info",
             "var_type": "String"
         },
@@ -8099,8 +8099,7 @@
         {
             "hint": "4:",
             "value": [
-                "Amount",
-                "Stun"
+                "Amount"
             ],
             "var": "ValueNames",
             "var_type": "Array"
@@ -8108,8 +8107,7 @@
         {
             "hint": "3:",
             "value": [
-                16.0,
-                0.2
+                16.0
             ],
             "var": "Values",
             "var_type": "Array"
@@ -8117,8 +8115,7 @@
         {
             "hint": "",
             "value": {
-                "Amount": 16,
-                "Stun": 0.2
+                "Amount": 16
             },
             "var": "CustomValues",
             "var_type": "Dictionary"
@@ -8131,7 +8128,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371860526233749>",
+            "value": "<SpriteFrames#-9223371859368605845>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -8161,7 +8158,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371860811446424>",
+            "value": "<PackedScene#-9223371859653818520>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -8263,7 +8260,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371677671349913>",
+            "value": "<GDScript#-9223371676480167577>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -8549,7 +8546,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371860173912211>",
+            "value": "<SpriteFrames#-9223371859016284307>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -8681,7 +8678,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371676111068828>",
+            "value": "<GDScript#-9223371674919886492>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -8967,7 +8964,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371859821590670>",
+            "value": "<SpriteFrames#-9223371858663962766>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -9099,7 +9096,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371674886332055>",
+            "value": "<GDScript#-9223371673695149719>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -9379,7 +9376,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371859469269133>",
+            "value": "<SpriteFrames#-9223371858311641229>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -9797,7 +9794,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371858865289353>",
+            "value": "<SpriteFrames#-9223371857707661449>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -9827,7 +9824,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371859150502020>",
+            "value": "<PackedScene#-9223371857992874116>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -9929,7 +9926,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371673661595286>",
+            "value": "<GDScript#-9223371672470412950>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -10209,7 +10206,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371858345195643>",
+            "value": "<SpriteFrames#-9223371857187567739>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -10239,7 +10236,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371858630408319>",
+            "value": "<PackedScene#-9223371857472780415>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -10627,7 +10624,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371857841879154>",
+            "value": "<SpriteFrames#-9223371856684251250>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -10657,7 +10654,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371858110314615>",
+            "value": "<PackedScene#-9223371856952686711>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -10759,7 +10756,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371672621407893>",
+            "value": "<GDScript#-9223371671430225557>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -11039,7 +11036,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371857489557616>",
+            "value": "<SpriteFrames#-9223371856331929712>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -11171,7 +11168,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371671195344530>",
+            "value": "<GDScript#-9223371670004162194>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -11457,13 +11454,13 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371856919132276>",
+            "value": "<SpriteFrames#-9223371855761504372>",
             "var": "Sprite",
             "var_type": "Object"
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371856935909485>",
+            "value": "<SpriteFrames#-9223371855778281581>",
             "var": "Projectile",
             "var_type": "Object"
         },
@@ -11589,7 +11586,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371670104825491>",
+            "value": "<GDScript#-9223371668913643155>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -11875,13 +11872,13 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371856348706924>",
+            "value": "<SpriteFrames#-9223371855191079020>",
             "var": "Sprite",
             "var_type": "Object"
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371856365484136>",
+            "value": "<SpriteFrames#-9223371855207856232>",
             "var": "Projectile",
             "var_type": "Object"
         },
@@ -12007,7 +12004,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371669081415316>",
+            "value": "<GDScript#-9223371667890232980>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -12287,13 +12284,13 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371855778281582>",
+            "value": "<SpriteFrames#-9223371854620653678>",
             "var": "Sprite",
             "var_type": "Object"
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371855795058787>",
+            "value": "<SpriteFrames#-9223371854637430883>",
             "var": "Projectile",
             "var_type": "Object"
         },
@@ -12419,7 +12416,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371668259331729>",
+            "value": "<GDScript#-9223371667068149393>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -12699,7 +12696,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371855258187866>",
+            "value": "<SpriteFrames#-9223371854100559962>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -12729,7 +12726,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371855543400542>",
+            "value": "<PackedScene#-9223371854385772638>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -13111,13 +13108,13 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371854687762517>",
+            "value": "<SpriteFrames#-9223371853530134613>",
             "var": "Sprite",
             "var_type": "Object"
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371854704539732>",
+            "value": "<SpriteFrames#-9223371853546911828>",
             "var": "Projectile",
             "var_type": "Object"
         },
@@ -13523,13 +13520,13 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371854117337168>",
+            "value": "<SpriteFrames#-9223371852959709264>",
             "var": "Sprite",
             "var_type": "Object"
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371854134114383>",
+            "value": "<SpriteFrames#-9223371852976486479>",
             "var": "Projectile",
             "var_type": "Object"
         },
@@ -13941,7 +13938,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371853765015628>",
+            "value": "<SpriteFrames#-9223371852607387724>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -14073,7 +14070,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371667370139280>",
+            "value": "<GDScript#-9223371666178956944>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -14353,7 +14350,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371853261699142>",
+            "value": "<SpriteFrames#-9223371852104071238>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -14383,7 +14380,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371853345585224>",
+            "value": "<PackedScene#-9223371852187957320>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -14485,7 +14482,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371666145402511>",
+            "value": "<GDScript#-9223371664954220175>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -14771,7 +14768,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371852305397820>",
+            "value": "<SpriteFrames#-9223371851147769916>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -14903,7 +14900,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371664434126478>",
+            "value": "<GDScript#-9223371663242944142>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -15183,7 +15180,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371851785304120>",
+            "value": "<SpriteFrames#-9223371850627676216>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -15213,7 +15210,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371852070516804>",
+            "value": "<PackedScene#-9223371850912888900>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -15601,7 +15598,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371851265210417>",
+            "value": "<SpriteFrames#-9223371850107582513>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -15631,7 +15628,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371851550423092>",
+            "value": "<PackedScene#-9223371850392795188>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -15733,7 +15730,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371663259721355>",
+            "value": "<GDScript#-9223371662068539019>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -16019,7 +16016,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371850778671147>",
+            "value": "<SpriteFrames#-9223371849621043243>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -16049,7 +16046,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371851063883823>",
+            "value": "<PackedScene#-9223371849906255919>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -16151,7 +16148,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371662303420042>",
+            "value": "<GDScript#-9223371661112237706>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -16431,13 +16428,13 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371850208245802>",
+            "value": "<SpriteFrames#-9223371849050617898>",
             "var": "Sprite",
             "var_type": "Object"
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371850225023015>",
+            "value": "<SpriteFrames#-9223371849067395111>",
             "var": "Projectile",
             "var_type": "Object"
         },
@@ -16563,7 +16560,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371661397450381>",
+            "value": "<GDScript#-9223371660206268045>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -16849,13 +16846,13 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371849637820464>",
+            "value": "<SpriteFrames#-9223371848480192560>",
             "var": "Sprite",
             "var_type": "Object"
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371849654597666>",
+            "value": "<SpriteFrames#-9223371848496969762>",
             "var": "Projectile",
             "var_type": "Object"
         },
@@ -16981,7 +16978,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371660642475656>",
+            "value": "<GDScript#-9223371659451293320>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -17267,7 +17264,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371849268721694>",
+            "value": "<SpriteFrames#-9223371848111093790>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -17297,7 +17294,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371869636262118>",
+            "value": "<PackedScene#-9223371868478634214>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -17399,7 +17396,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371659954609801>",
+            "value": "<GDScript#-9223371658763427465>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -17685,13 +17682,13 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371848698296349>",
+            "value": "<SpriteFrames#-9223371847540668445>",
             "var": "Sprite",
             "var_type": "Object"
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371848715073562>",
+            "value": "<SpriteFrames#-9223371847557445658>",
             "var": "Projectile",
             "var_type": "Object"
         },
@@ -17817,7 +17814,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371659065417356>",
+            "value": "<GDScript#-9223371657874235020>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -18103,13 +18100,13 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371848127871001>",
+            "value": "<SpriteFrames#-9223371846970243097>",
             "var": "Sprite",
             "var_type": "Object"
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371848144648213>",
+            "value": "<SpriteFrames#-9223371846987020309>",
             "var": "Projectile",
             "var_type": "Object"
         },
@@ -18235,7 +18232,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371658461437575>",
+            "value": "<GDScript#-9223371657270255239>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -18515,7 +18512,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371847775549458>",
+            "value": "<SpriteFrames#-9223371846617921554>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -18933,7 +18930,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371847272232970>",
+            "value": "<SpriteFrames#-9223371846114605066>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -18963,7 +18960,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371847557445646>",
+            "value": "<PackedScene#-9223371846399817742>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -19065,7 +19062,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371657438027397>",
+            "value": "<GDScript#-9223371656246845061>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -19351,7 +19348,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371846903134215>",
+            "value": "<SpriteFrames#-9223371845745506311>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -19381,7 +19378,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371870710003953>",
+            "value": "<PackedScene#-9223371869552376049>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -19483,7 +19480,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371656011964038>",
+            "value": "<GDScript#-9223371654820781702>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -19769,7 +19766,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371846550812677>",
+            "value": "<SpriteFrames#-9223371845393184773>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -19901,7 +19898,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371654518791812>",
+            "value": "<GDScript#-9223371653327609476>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -20187,7 +20184,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371845594511356>",
+            "value": "<SpriteFrames#-9223371844436883452>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -20319,7 +20316,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371653495381635>",
+            "value": "<GDScript#-9223371652304199299>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -20599,13 +20596,13 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371845225412609>",
+            "value": "<SpriteFrames#-9223371844067784705>",
             "var": "Sprite",
             "var_type": "Object"
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371845242189818>",
+            "value": "<SpriteFrames#-9223371844084561914>",
             "var": "Projectile",
             "var_type": "Object"
         },
@@ -20731,7 +20728,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371652740406914>",
+            "value": "<GDScript#-9223371651549224578>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -21011,7 +21008,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371844738873332>",
+            "value": "<SpriteFrames#-9223371843581245428>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -21041,7 +21038,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371845024086008>",
+            "value": "<PackedScene#-9223371843866458104>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -21143,7 +21140,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371651851214465>",
+            "value": "<GDScript#-9223371650660032129>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -21429,7 +21426,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371844369774577>",
+            "value": "<SpriteFrames#-9223371843212146673>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -21459,7 +21456,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371870710003953>",
+            "value": "<PackedScene#-9223371869552376049>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -21561,7 +21558,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371650475482752>",
+            "value": "<GDScript#-9223371649284300416>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -21847,7 +21844,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371844000675822>",
+            "value": "<SpriteFrames#-9223371842843047918>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -21877,7 +21874,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371870710003953>",
+            "value": "<PackedScene#-9223371869552376049>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -21979,7 +21976,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371649233968765>",
+            "value": "<GDScript#-9223371648042786429>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -22265,7 +22262,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371843648354284>",
+            "value": "<SpriteFrames#-9223371842490726380>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -22397,7 +22394,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371648059563644>",
+            "value": "<GDScript#-9223371646868381308>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -22683,7 +22680,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371843296032745>",
+            "value": "<SpriteFrames#-9223371842138404841>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -22815,7 +22812,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371646683831931>",
+            "value": "<GDScript#-9223371645492649595>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -23095,7 +23092,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371842775939039>",
+            "value": "<SpriteFrames#-9223371841618311135>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -23125,7 +23122,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371843044374499>",
+            "value": "<PackedScene#-9223371841886746595>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -23227,7 +23224,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371645593312890>",
+            "value": "<GDScript#-9223371644402130554>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -23513,13 +23510,13 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371842037741530>",
+            "value": "<SpriteFrames#-9223371840880113626>",
             "var": "Sprite",
             "var_type": "Object"
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371842054518743>",
+            "value": "<SpriteFrames#-9223371840896890839>",
             "var": "Projectile",
             "var_type": "Object"
         },
@@ -23543,7 +23540,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371842541058013>",
+            "value": "<PackedScene#-9223371841383430109>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -23645,7 +23642,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371644284690047>",
+            "value": "<GDScript#-9223371643093507711>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -23931,7 +23928,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371841668642772>",
+            "value": "<SpriteFrames#-9223371840511014868>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -23961,7 +23958,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371870710003953>",
+            "value": "<PackedScene#-9223371869552376049>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -24063,7 +24060,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371643596824184>",
+            "value": "<GDScript#-9223371642405641848>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -24349,7 +24346,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371841299544017>",
+            "value": "<SpriteFrames#-9223371840141916113>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -24379,7 +24376,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371870710003953>",
+            "value": "<PackedScene#-9223371869552376049>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -24481,7 +24478,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371642623745657>",
+            "value": "<GDScript#-9223371641432563321>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -24767,7 +24764,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371840779450313>",
+            "value": "<SpriteFrames#-9223371839621822409>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -24797,7 +24794,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371841064662989>",
+            "value": "<PackedScene#-9223371839907035085>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -24899,7 +24896,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371641399008886>",
+            "value": "<GDScript#-9223371640207826550>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -25179,7 +25176,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371840225802181>",
+            "value": "<SpriteFrames#-9223371839068174277>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -25311,7 +25308,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371640241380983>",
+            "value": "<GDScript#-9223371639050198647>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -25597,7 +25594,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371839856703426>",
+            "value": "<SpriteFrames#-9223371838699075522>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -25627,7 +25624,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371870710003953>",
+            "value": "<PackedScene#-9223371869552376049>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -25729,7 +25726,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371639570292350>",
+            "value": "<GDScript#-9223371638379110014>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -26015,7 +26012,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371839487604671>",
+            "value": "<SpriteFrames#-9223371838329976767>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -26045,7 +26042,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371870710003953>",
+            "value": "<PackedScene#-9223371869552376049>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -26147,7 +26144,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371638546882164>",
+            "value": "<GDScript#-9223371637355699828>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -26427,7 +26424,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371838917179322>",
+            "value": "<SpriteFrames#-9223371837759551418>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -26457,7 +26454,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371869636262118>",
+            "value": "<PackedScene#-9223371868478634214>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -26559,7 +26556,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371636969823861>",
+            "value": "<GDScript#-9223371635778641525>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -26845,7 +26842,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371838346753974>",
+            "value": "<SpriteFrames#-9223371837189126070>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -26875,7 +26872,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371870710003953>",
+            "value": "<PackedScene#-9223371869552376049>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -26977,7 +26974,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371635879304817>",
+            "value": "<GDScript#-9223371634688122481>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -27266,7 +27263,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371837994432443>",
+            "value": "<SpriteFrames#-9223371836836804539>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -27398,7 +27395,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371634721676914>",
+            "value": "<GDScript#-9223371633530494578>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -27684,7 +27681,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371837642110898>",
+            "value": "<SpriteFrames#-9223371836484482994>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -27816,7 +27813,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371633765375603>",
+            "value": "<GDScript#-9223371632574193267>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -28102,13 +28099,13 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371837071685552>",
+            "value": "<SpriteFrames#-9223371835914057648>",
             "var": "Sprite",
             "var_type": "Object"
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371837088462765>",
+            "value": "<SpriteFrames#-9223371835930834861>",
             "var": "Projectile",
             "var_type": "Object"
         },
@@ -28234,7 +28231,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371632741965424>",
+            "value": "<GDScript#-9223371631550783088>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -28514,13 +28511,13 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371836501260206>",
+            "value": "<SpriteFrames#-9223371835343632302>",
             "var": "Sprite",
             "var_type": "Object"
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371836518037416>",
+            "value": "<SpriteFrames#-9223371835360409512>",
             "var": "Projectile",
             "var_type": "Object"
         },
@@ -28932,7 +28929,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371835142305691>",
+            "value": "<SpriteFrames#-9223371833984677787>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -29064,7 +29061,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371632070876783>",
+            "value": "<GDScript#-9223371630879694447>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -29350,7 +29347,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371834773206938>",
+            "value": "<SpriteFrames#-9223371833615579034>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -29380,7 +29377,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371869636262118>",
+            "value": "<PackedScene#-9223371868478634214>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -29482,7 +29479,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371630980357741>",
+            "value": "<GDScript#-9223371629789175405>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -29768,7 +29765,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371834068563860>",
+            "value": "<SpriteFrames#-9223371832910935956>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -29798,7 +29795,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371834353776537>",
+            "value": "<PackedScene#-9223371833196148633>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -29900,7 +29897,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371629470408302>",
+            "value": "<GDScript#-9223371628279225966>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -30186,7 +30183,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371833716242322>",
+            "value": "<SpriteFrames#-9223371832558614418>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -30318,7 +30315,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371627557805674>",
+            "value": "<GDScript#-9223371626366623338>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -30598,7 +30595,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371833363920783>",
+            "value": "<SpriteFrames#-9223371832206292879>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -31019,13 +31016,13 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371832776718220>",
+            "value": "<SpriteFrames#-9223371831619090316>",
             "var": "Sprite",
             "var_type": "Object"
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371832793495433>",
+            "value": "<SpriteFrames#-9223371831635867529>",
             "var": "Projectile",
             "var_type": "Object"
         },
@@ -31049,7 +31046,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371869636262118>",
+            "value": "<PackedScene#-9223371868478634214>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -31151,7 +31148,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371626333068905>",
+            "value": "<GDScript#-9223371625141886569>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -31431,7 +31428,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371832407619462>",
+            "value": "<SpriteFrames#-9223371831249991558>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -31461,7 +31458,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371869636262118>",
+            "value": "<PackedScene#-9223371868478634214>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -31563,7 +31560,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371625578094188>",
+            "value": "<GDScript#-9223371624386911852>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -31849,7 +31846,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371832055297924>",
+            "value": "<SpriteFrames#-9223371830897670020>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -31981,7 +31978,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371624084921963>",
+            "value": "<GDScript#-9223371622893739627>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -32261,7 +32258,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371831568758653>",
+            "value": "<SpriteFrames#-9223371830411130749>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -32291,7 +32288,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371831853971329>",
+            "value": "<PackedScene#-9223371830696343425>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -32393,7 +32390,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371623128620648>",
+            "value": "<GDScript#-9223371621937438312>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -32679,7 +32676,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371831199659898>",
+            "value": "<SpriteFrames#-9223371830042031994>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -32709,7 +32706,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371870710003953>",
+            "value": "<PackedScene#-9223371869552376049>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -32811,7 +32808,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371621954215527>",
+            "value": "<GDScript#-9223371620763033191>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -33091,13 +33088,13 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371830629234577>",
+            "value": "<SpriteFrames#-9223371829471606673>",
             "var": "Sprite",
             "var_type": "Object"
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371830646011766>",
+            "value": "<SpriteFrames#-9223371829488383862>",
             "var": "Projectile",
             "var_type": "Object"
         },
@@ -33509,7 +33506,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371830260135794>",
+            "value": "<SpriteFrames#-9223371829102507890>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -33539,7 +33536,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371870710003953>",
+            "value": "<PackedScene#-9223371869552376049>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -33641,7 +33638,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371620863696484>",
+            "value": "<GDScript#-9223371619672514148>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -33927,7 +33924,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371829891037039>",
+            "value": "<SpriteFrames#-9223371828733409135>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -33957,7 +33954,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371870710003953>",
+            "value": "<PackedScene#-9223371869552376049>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -34059,7 +34056,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371619555073637>",
+            "value": "<GDScript#-9223371618363891301>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -34348,7 +34345,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371829521938284>",
+            "value": "<SpriteFrames#-9223371828364310380>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -34378,7 +34375,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371870710003953>",
+            "value": "<PackedScene#-9223371869552376049>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -34480,7 +34477,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371618464554594>",
+            "value": "<GDScript#-9223371617273372258>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -34766,13 +34763,13 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371828951512939>",
+            "value": "<SpriteFrames#-9223371827793885035>",
             "var": "Sprite",
             "var_type": "Object"
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371828968290152>",
+            "value": "<SpriteFrames#-9223371827810662248>",
             "var": "Projectile",
             "var_type": "Object"
         },
@@ -34898,7 +34895,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371617021714019>",
+            "value": "<GDScript#-9223371615830531683>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -35184,7 +35181,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371828582414180>",
+            "value": "<SpriteFrames#-9223371827424786276>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -35214,7 +35211,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371870710003953>",
+            "value": "<PackedScene#-9223371869552376049>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -35316,7 +35313,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371616266739296>",
+            "value": "<GDScript#-9223371615075556960>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -35602,13 +35599,13 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371828011988835>",
+            "value": "<SpriteFrames#-9223371826854360931>",
             "var": "Sprite",
             "var_type": "Object"
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371828028766048>",
+            "value": "<SpriteFrames#-9223371826871138144>",
             "var": "Projectile",
             "var_type": "Object"
         },
@@ -35734,7 +35731,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371615293660769>",
+            "value": "<GDScript#-9223371614102478433>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -36020,7 +36017,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371827659667293>",
+            "value": "<SpriteFrames#-9223371826502039389>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -36152,7 +36149,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371614689680990>",
+            "value": "<GDScript#-9223371613498498654>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -36278,7 +36275,7 @@
         },
         {
             "hint": "",
-            "value": "When this attacks, it targets a random enemy for each friendly Magic unit. Has +3 Damage for each Tinker unit. (Damage can't be buffed otherwise)",
+            "value": "Start of Combat: Has +0.5 Damage for each friendly Tinker and Magic unit. When this attacks, it targets 5 random enemies and 1 random friendly unit.  (Damage can't be buffed otherwise)",
             "var": "Info",
             "var_type": "String"
         },
@@ -36320,7 +36317,7 @@
         },
         {
             "hint": "",
-            "value": 0.0,
+            "value": 5.0,
             "var": "Damage",
             "var_type": "float"
         },
@@ -36417,7 +36414,7 @@
         {
             "hint": "3:",
             "value": [
-                3.0
+                0.5
             ],
             "var": "Values",
             "var_type": "Array"
@@ -36425,7 +36422,7 @@
         {
             "hint": "",
             "value": {
-                "DamageBuff": 3
+                "DamageBuff": 0.5
             },
             "var": "CustomValues",
             "var_type": "Dictionary"
@@ -36438,13 +36435,13 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371827089241947>",
+            "value": "<SpriteFrames#-9223371825931614043>",
             "var": "Sprite",
             "var_type": "Object"
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371827106019160>",
+            "value": "<SpriteFrames#-9223371825948391256>",
             "var": "Projectile",
             "var_type": "Object"
         },
@@ -36570,7 +36567,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371613666270822>",
+            "value": "<GDScript#-9223371612475088486>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -36856,7 +36853,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371826736920405>",
+            "value": "<SpriteFrames#-9223371825579292501>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -36988,7 +36985,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371611887885919>",
+            "value": "<GDScript#-9223371610646371935>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -37274,7 +37271,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371826216826700>",
+            "value": "<SpriteFrames#-9223371825059198796>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -37304,7 +37301,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371826502039376>",
+            "value": "<PackedScene#-9223371825344411472>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -37406,7 +37403,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371610730258011>",
+            "value": "<GDScript#-9223371609488744029>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -37692,7 +37689,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371825713510213>",
+            "value": "<SpriteFrames#-9223371824555882309>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -37722,7 +37719,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371825998722889>",
+            "value": "<PackedScene#-9223371824841094985>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -37824,7 +37821,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371609572630108>",
+            "value": "<GDScript#-9223371608331116124>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -38104,7 +38101,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371825344411458>",
+            "value": "<SpriteFrames#-9223371824186783554>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -38134,7 +38131,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371869636262118>",
+            "value": "<PackedScene#-9223371868478634214>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -38236,7 +38233,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371608331116125>",
+            "value": "<GDScript#-9223371607089602139>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -38516,7 +38513,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371824992089920>",
+            "value": "<SpriteFrames#-9223371823834462016>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -38648,7 +38645,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371607358037592>",
+            "value": "<GDScript#-9223371606116523608>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -38934,7 +38931,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371824622991164>",
+            "value": "<SpriteFrames#-9223371823465363260>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -38964,7 +38961,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371834353776537>",
+            "value": "<PackedScene#-9223371833196148633>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -39066,7 +39063,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371606535954007>",
+            "value": "<GDScript#-9223371605294440023>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -39346,7 +39343,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371824270669626>",
+            "value": "<SpriteFrames#-9223371823113041722>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -39758,7 +39755,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371823750575922>",
+            "value": "<SpriteFrames#-9223371822592948018>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -39788,7 +39785,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371824035788597>",
+            "value": "<PackedScene#-9223371822878160693>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -39890,7 +39887,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371605361548890>",
+            "value": "<GDScript#-9223371604120034906>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -40170,13 +40167,13 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371823180150593>",
+            "value": "<SpriteFrames#-9223371822022522689>",
             "var": "Sprite",
             "var_type": "Object"
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371823196927790>",
+            "value": "<SpriteFrames#-9223371822039299886>",
             "var": "Projectile",
             "var_type": "Object"
         },
@@ -40302,7 +40299,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371604254252629>",
+            "value": "<GDScript#-9223371603012738645>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -40588,7 +40585,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371822827829035>",
+            "value": "<SpriteFrames#-9223371821670201131>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -40720,7 +40717,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371603348282964>",
+            "value": "<GDScript#-9223371602106768980>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -41000,7 +40997,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371822475507496>",
+            "value": "<SpriteFrames#-9223371821317879592>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -41132,7 +41129,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371602274541139>",
+            "value": "<GDScript#-9223371601033027155>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -41412,7 +41409,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371821955413791>",
+            "value": "<SpriteFrames#-9223371820797785887>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -41442,7 +41439,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371822240626467>",
+            "value": "<PackedScene#-9223371821082998563>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -41830,7 +41827,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371821603092253>",
+            "value": "<SpriteFrames#-9223371820445464349>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -41962,7 +41959,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371601184022102>",
+            "value": "<GDScript#-9223371599942508118>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -42248,7 +42245,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371821250770714>",
+            "value": "<SpriteFrames#-9223371820093142810>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -42380,7 +42377,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371600026394194>",
+            "value": "<GDScript#-9223371598784880210>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -42660,7 +42657,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371820730677009>",
+            "value": "<SpriteFrames#-9223371819573049105>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -42690,7 +42687,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371821015889685>",
+            "value": "<PackedScene#-9223371819858261781>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -43081,13 +43078,13 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371820160251678>",
+            "value": "<SpriteFrames#-9223371819002623774>",
             "var": "Sprite",
             "var_type": "Object"
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371820177028877>",
+            "value": "<SpriteFrames#-9223371819019400973>",
             "var": "Projectile",
             "var_type": "Object"
         },
@@ -43213,7 +43210,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371598533221969>",
+            "value": "<GDScript#-9223371597291707985>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -43499,13 +43496,13 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371819589826329>",
+            "value": "<SpriteFrames#-9223371818432198425>",
             "var": "Sprite",
             "var_type": "Object"
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371819606603528>",
+            "value": "<SpriteFrames#-9223371818448975624>",
             "var": "Projectile",
             "var_type": "Object"
         },
@@ -43631,7 +43628,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371597174267472>",
+            "value": "<GDScript#-9223371595932753488>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -43917,7 +43914,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371819086509824>",
+            "value": "<SpriteFrames#-9223371817928881920>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -43947,7 +43944,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371819371722500>",
+            "value": "<PackedScene#-9223371818214094596>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -44049,7 +44046,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371595949530703>",
+            "value": "<GDScript#-9223371594708016719>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -44175,7 +44172,7 @@
         },
         {
             "hint": "",
-            "value": "Passive: When an adjacent Tinker unit triggers, give a random friendly Weapon +1 Damage. Also speed up a friendly Town unit by 1% for each friendly Town unit with a cooldown.",
+            "value": "Passive: When an adjacent Tinker unit triggers, give a random friendly Weapon +1 Damage. Also speed up 3 friendly Town unit by 1%.",
             "var": "Info",
             "var_type": "String"
         },
@@ -44307,7 +44304,8 @@
             "hint": "4:",
             "value": [
                 "DamageBuff",
-                "SpeedBuff"
+                "SpeedBuff",
+                "Amount"
             ],
             "var": "ValueNames",
             "var_type": "Array"
@@ -44316,7 +44314,8 @@
             "hint": "3:",
             "value": [
                 1.0,
-                1.0
+                1.0,
+                3.0
             ],
             "var": "Values",
             "var_type": "Array"
@@ -44324,6 +44323,7 @@
         {
             "hint": "",
             "value": {
+                "Amount": 3,
                 "DamageBuff": 1,
                 "SpeedBuff": 1
             },
@@ -44338,7 +44338,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371818566416120>",
+            "value": "<SpriteFrames#-9223371817408788216>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -44368,7 +44368,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371818851628796>",
+            "value": "<PackedScene#-9223371817694000892>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -44470,7 +44470,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371594791902798>",
+            "value": "<GDScript#-9223371593550388814>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -44750,7 +44750,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371818214094582>",
+            "value": "<SpriteFrames#-9223371817056466678>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -44882,7 +44882,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371593097403981>",
+            "value": "<GDScript#-9223371591855889997>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -45162,13 +45162,13 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371817039689450>",
+            "value": "<SpriteFrames#-9223371815882061546>",
             "var": "Sprite",
             "var_type": "Object"
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371817056466665>",
+            "value": "<SpriteFrames#-9223371815898838761>",
             "var": "Projectile",
             "var_type": "Object"
         },
@@ -45294,7 +45294,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371591939776076>",
+            "value": "<GDScript#-9223371590698262092>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -45574,7 +45574,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371816670590703>",
+            "value": "<SpriteFrames#-9223371815512962799>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -45604,7 +45604,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371870710003953>",
+            "value": "<PackedScene#-9223371869552376049>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -45706,7 +45706,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371591335796299>",
+            "value": "<GDScript#-9223371590094282315>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -45995,7 +45995,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371816301491943>",
+            "value": "<SpriteFrames#-9223371815143864039>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -46025,7 +46025,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371870710003953>",
+            "value": "<PackedScene#-9223371869552376049>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -46127,7 +46127,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371590379494985>",
+            "value": "<GDScript#-9223371589137981001>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -46407,7 +46407,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371815932393186>",
+            "value": "<SpriteFrames#-9223371814774765282>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -46437,7 +46437,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371834353776537>",
+            "value": "<PackedScene#-9223371833196148633>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -46827,7 +46827,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371815580071648>",
+            "value": "<SpriteFrames#-9223371814422443744>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -46959,7 +46959,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371589020540490>",
+            "value": "<GDScript#-9223371587779026506>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -47241,7 +47241,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371815043200734>",
+            "value": "<SpriteFrames#-9223371813885572830>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -47271,7 +47271,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371815110309593>",
+            "value": "<PackedScene#-9223371813952681689>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -47373,7 +47373,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371587862912584>",
+            "value": "<GDScript#-9223371586621398600>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
@@ -47659,7 +47659,7 @@
         },
         {
             "hint": "SpriteFrames",
-            "value": "<SpriteFrames#-9223371814674101971>",
+            "value": "<SpriteFrames#-9223371813516474067>",
             "var": "Sprite",
             "var_type": "Object"
         },
@@ -47689,7 +47689,7 @@
         },
         {
             "hint": "PackedScene",
-            "value": "<PackedScene#-9223371870710003953>",
+            "value": "<PackedScene#-9223371869552376049>",
             "var": "Particles",
             "var_type": "Object"
         },
@@ -47791,7 +47791,7 @@
         },
         {
             "hint": "",
-            "value": "<GDScript#-9223371586772393543>",
+            "value": "<GDScript#-9223371585530879559>",
             "var": "ProcessScript",
             "var_type": "Object"
         },
