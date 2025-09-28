@@ -13,10 +13,9 @@ import Typography from '@mui/material/Typography';
 
 import CloseIcon from '@mui/icons-material/Close';
 
-import { getHintLabel } from './UnitTable';
+import { getHintLabel, getFactionColor } from '../util';
 import type { Unit } from './UnitTable';
 
-import type { FactionColor } from '../main';
 
 interface UnitDialogProps {
     open: boolean;
@@ -32,8 +31,7 @@ const UnitDialog: React.FC<UnitDialogProps> = ({ open, onClose, unit }) => {
         setUnitImgLoading(true);
     }, [open]);
 
-    const factionLabel = getHintLabel((unit as any).Faction_hint, unit.Faction) || 'Basic';
-    const factionColor = `faction${factionLabel}` as FactionColor;
+    const factionColor = getFactionColor(unit);
 
     return (
         <Dialog open={open} onClose={onClose} maxWidth="sm" fullWidth>

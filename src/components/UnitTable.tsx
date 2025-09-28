@@ -10,6 +10,7 @@ import Box from '@mui/material/Box';
 import Skeleton from '@mui/material/Skeleton';
 
 import UnitDialog from './UnitDialog';
+import { getHintLabel } from '../util';
 
 export type Unit = {
     ID: number;
@@ -87,17 +88,6 @@ const fetchUnitData = async () => {
         return localResponse.json();
     }
 };
-
-// Utility: Parse hint string and get label for value
-export function getHintLabel(hint: string, value: number | string): string {
-    if (!hint) return String(value ?? "");
-    const map: Record<string, string> = {};
-    hint.split(',').forEach(pair => {
-        const [label, val] = pair.split(':');
-        if (label && val !== undefined) map[val.trim()] = label.trim();
-    });
-    return map[String(value)] ?? String(value ?? "");
-}
 
 const UnitTable = () => {
     const {
