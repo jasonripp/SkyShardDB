@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 
 import Box from '@mui/material/Box';
 import Chip from '@mui/material/Chip';
-import CircularProgress from '@mui/material/CircularProgress';
 import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
 import DialogTitle from '@mui/material/DialogTitle';
 import IconButton from '@mui/material/IconButton';
 import Paper from '@mui/material/Paper';
+import Skeleton from '@mui/material/Skeleton';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
@@ -34,7 +34,6 @@ const UnitDialog: React.FC<UnitDialogProps> = ({ open, onClose, unit }) => {
 
     const factionLabel = getHintLabel((unit as any).Faction_hint, unit.Faction) || 'Basic';
     const factionColor = `faction${factionLabel}` as FactionColor;
-    console.log(factionColor);
 
     return (
         <Dialog open={open} onClose={onClose} maxWidth="sm" fullWidth>
@@ -72,8 +71,11 @@ const UnitDialog: React.FC<UnitDialogProps> = ({ open, onClose, unit }) => {
                 <Box>
                     <Box sx={{ mb: 2, textAlign: 'center' }}>
                         {unitImgLoading && (
-                            <CircularProgress
-                                size={64}
+                            <Skeleton
+                                variant="rectangular"
+                                width={240}
+                                height={240}
+                                sx={{ margin: '0 auto', display: 'block', maxWidth: 400, maxHeight: 400 }}
                             />
                         )}
                         <img

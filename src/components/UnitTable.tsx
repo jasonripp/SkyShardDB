@@ -7,7 +7,7 @@ import {
 import { useQuery } from '@tanstack/react-query';
 
 import Box from '@mui/material/Box';
-import CircularProgress from '@mui/material/CircularProgress';
+import Skeleton from '@mui/material/Skeleton';
 
 import UnitDialog from './UnitDialog';
 
@@ -204,8 +204,10 @@ const UnitTable = () => {
                     return (
                         <Box sx={{ width: 50 }}>
                             {imgLoading && (
-                                <CircularProgress
-                                    size={32}
+                                <Skeleton
+                                    variant="rectangular"
+                                    width={50}
+                                    height={50}
                                 />
                             )}
                             <img
@@ -330,7 +332,6 @@ const UnitTable = () => {
         },
     });
 
-    // if (isLoading) return <Box><CircularProgress /></Box>;
     if (error) return <div>Error loading data</div>;
 
     return (
