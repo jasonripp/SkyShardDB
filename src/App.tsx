@@ -37,19 +37,21 @@ function App() {
     <>
       <CssBaseline />
       <Container maxWidth="xl">
-        <Grid container justifyContent="space-between" alignItems="flex-end" >
-          <Grid >
-            <Typography variant={isSmallScreen ? "h4" : "h2"} component="h1" gutterBottom>SkyShard DataBase</Typography>
-            <PatchInfo />
+        <Box>
+          <Grid container justifyContent="space-between" alignItems="flex-end" >
+            <Grid >
+              <Typography variant={isSmallScreen ? "h4" : "h2"} component="h1" gutterBottom>SkyShard DataBase</Typography>
+              <PatchInfo />
+            </Grid>
+            <Grid>
+              <Box>
+                {!isSmallScreen &&
+                  <img src={logoSrc} style={{ maxWidth: "300px" }} alt="logo" />
+                }
+              </Box>
+            </Grid>
           </Grid>
-          <Grid>
-            <Box>
-              {!isSmallScreen &&
-                <img src={logoSrc} style={{ maxWidth: "300px" }} alt="logo" />
-              }
-            </Box>
-          </Grid>
-        </Grid>
+        </Box>
         <UnitTable />
         <Box>
           <Typography variant="caption">
