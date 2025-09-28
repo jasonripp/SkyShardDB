@@ -100,7 +100,11 @@ export function getHintLabel(hint: string, value: number | string): string {
 }
 
 const UnitTable = () => {
-    const { data, isLoading, error } = useQuery({
+    const {
+        data, 
+        isLoading: isLoadingUnits,
+        error,
+    } = useQuery({
         queryKey: ['unitData'],
         queryFn: fetchUnitData,
     });
@@ -284,7 +288,7 @@ const UnitTable = () => {
         enablePagination: false,
         // positionGlobalFilter: 'left',
         enableStickyHeader: true,
-        enableStickyFooter: true,
+        renderBottomToolbar: false,
         muiTableBodyRowProps: ({ row }) => ({
             onClick: () => handleRowClick(row),
             sx: {
@@ -293,10 +297,7 @@ const UnitTable = () => {
         }),
         muiTableContainerProps: {
             sx: {
-                flex: '1 1 auto',
-                minHeight: 0,
                 maxHeight: 'calc(100vh - 300px)',
-                overflow: 'auto',
             }
         },
         initialState: {
@@ -324,9 +325,12 @@ const UnitTable = () => {
                 }
             ],
         },
+        state: {
+            isLoading: isLoadingUnits,
+        },
     });
 
-    if (isLoading) return <Box><CircularProgress /></Box>;
+    // if (isLoading) return <Box><CircularProgress /></Box>;
     if (error) return <div>Error loading data</div>;
 
     return (

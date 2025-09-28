@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
 
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import Chip from '@mui/material/Chip';
 import CircularProgress from '@mui/material/CircularProgress';
 import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogTitle from '@mui/material/DialogTitle';
 import IconButton from '@mui/material/IconButton';
@@ -17,6 +15,8 @@ import CloseIcon from '@mui/icons-material/Close';
 
 import { getHintLabel } from './UnitTable';
 import type { Unit } from './UnitTable';
+
+import type { FactionColor } from '../main';
 
 interface UnitDialogProps {
     open: boolean;
@@ -31,6 +31,10 @@ const UnitDialog: React.FC<UnitDialogProps> = ({ open, onClose, unit }) => {
     useEffect(() => {
         setUnitImgLoading(true);
     }, [open]);
+
+    const factionLabel = getHintLabel((unit as any).Faction_hint, unit.Faction) || 'Basic';
+    const factionColor = `faction${factionLabel}` as FactionColor;
+    console.log(factionColor);
 
     return (
         <Dialog open={open} onClose={onClose} maxWidth="sm" fullWidth>
@@ -60,10 +64,10 @@ const UnitDialog: React.FC<UnitDialogProps> = ({ open, onClose, unit }) => {
                         justifyContent: 'center', 
                     }}
                 >
-                    <Chip label={`Rarity: ${unit.Rarity}`} color="primary" />
-                    <Chip label={getHintLabel((unit as any).Faction_hint, unit.Faction)} color="primary" />
-                    <Chip label={getHintLabel((unit as any).Role_hint, unit.Role)} color="primary" />
-                    <Chip label={getHintLabel((unit as any).Type_hint, unit.Type)} color="primary" />
+                    <Chip label={`Rarity: ${unit.Rarity}`} color={factionColor} />
+                    <Chip label={getHintLabel((unit as any).Faction_hint, unit.Faction)} color={factionColor} />
+                    <Chip label={getHintLabel((unit as any).Role_hint, unit.Role)} color={factionColor} />
+                    <Chip label={getHintLabel((unit as any).Type_hint, unit.Type)} color={factionColor} />
                 </Stack>
                 <Box>
                     <Box sx={{ mb: 2, textAlign: 'center' }}>
@@ -97,11 +101,6 @@ const UnitDialog: React.FC<UnitDialogProps> = ({ open, onClose, unit }) => {
                     </Paper>
                 </Box>
             </DialogContent>
-            {/* <DialogActions>
-                <Button onClick={onClose} color="primary">
-                    Close
-                </Button>
-            </DialogActions> */}
         </Dialog>
     );
 };

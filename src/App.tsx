@@ -36,29 +36,27 @@ function App() {
   return (
     <>
       <CssBaseline />
-      <Box sx={{ height: '100vh', display: 'flex', flexDirection: 'column', minHeight: 0 }}>
-        <Container maxWidth="xl" sx={{ flex: '1 1 auto', display: 'flex', flexDirection: 'column', minHeight: 0 }}>
-          <Grid container justifyContent="space-between" alignItems="flex-end">
-            <Grid >
-              <Typography variant={isSmallScreen ? "h4" : "h2"} component="h1" gutterBottom>SkyShard DataBase</Typography>
-              <PatchInfo />
-            </Grid>
-            <Grid>
-              <Box>
-                {!isSmallScreen &&
-                  <img src={logoSrc} style={{ maxWidth: "300px" }} alt="logo" />
-                }
-              </Box>
-            </Grid>
+      <Container maxWidth="xl">
+        <Grid container justifyContent="space-between" alignItems="flex-end" >
+          <Grid >
+            <Typography variant={isSmallScreen ? "h4" : "h2"} component="h1" gutterBottom>SkyShard DataBase</Typography>
+            <PatchInfo />
           </Grid>
-          <Box sx={{ flex: '1 1 auto', minHeight: 0, display: 'flex', flexDirection: 'column' }}>
-            <UnitTable />
-          </Box>
+          <Grid>
+            <Box>
+              {!isSmallScreen &&
+                <img src={logoSrc} style={{ maxWidth: "300px" }} alt="logo" />
+              }
+            </Box>
+          </Grid>
+        </Grid>
+        <UnitTable />
+        <Box>
           <Typography variant="caption">
             Last built: {buildDate || "unknown"}
           </Typography>
-        </Container>
-      </Box>
+        </Box>
+      </Container>
     </>
   )
 }
