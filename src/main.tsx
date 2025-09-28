@@ -28,9 +28,13 @@ declare module '@mui/material/styles' {
     factionNovus?: PaletteOptions['primary'];
     factionNature?: PaletteOptions['primary'];
   }
+
+  interface PaletteColor {
+    lighter?: string;
+    darker?: string;
+  }
 }
 
-// Update the Button's color options to include an ochre option
 declare module '@mui/material/Chip' {
   interface ChipPropsColorOverrides {
     factionBasic: true;
@@ -41,51 +45,29 @@ declare module '@mui/material/Chip' {
     factionNature: true;
   }
 }
+
 let theme = createTheme({
   colorSchemes: {
     light: true,
     dark: true,
   },
 });
+const makeFactionColor = (main: string) => {
+  const color = theme.palette.augmentColor({ color: { main } });
+  (color as any).lighter = theme.lighten(color.light, 0.5);
+  (color as any).darker = theme.darken(color.dark, 0.5);
+  return color;
+};
+
 theme = createTheme(theme, {
-  // Custom colors created with augmentColor go here
+
   palette: {
-    factionBasic: theme.palette.augmentColor({
-      color: {
-        main: '#55504F',
-      },
-      name: 'factionBasic',
-    }),
-    factionTinker: theme.palette.augmentColor({
-      color: {
-        main: '#625205',
-      },
-      name: 'factionTinker',
-    }),
-    factionMagic: theme.palette.augmentColor({
-      color: {
-        main: '#62086A',
-      },
-      name: 'factionMagic',
-    }),
-    factionAncient: theme.palette.augmentColor({
-      color: {
-        main: '#491213',
-      },
-      name: 'factionAncient',
-    }),
-    factionNovus: theme.palette.augmentColor({
-      color: {
-        main: '#1D376B',
-      },
-      name: 'factionNovus',
-    }),
-    factionNature: theme.palette.augmentColor({
-      color: {
-        main: '#294305',
-      },
-      name: 'factionNature',
-    }),
+    factionBasic: makeFactionColor('#55504F'),
+    factionTinker: makeFactionColor('#625205'),
+    factionMagic: makeFactionColor('#62086A'),
+    factionAncient: makeFactionColor('#491213'),
+    factionNovus: makeFactionColor('#1D376B'),
+    factionNature: makeFactionColor('#294305'),
   },
 });
 

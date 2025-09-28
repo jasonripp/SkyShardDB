@@ -12,6 +12,7 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
 import CloseIcon from '@mui/icons-material/Close';
+import { useTheme } from '@mui/material/styles';
 
 import { getHintLabel, getFactionColor } from '../util';
 import type { Unit } from './UnitTable';
@@ -26,16 +27,35 @@ interface UnitDialogProps {
 const UnitDialog: React.FC<UnitDialogProps> = ({ open, onClose, unit }) => {
 
     const [unitImgLoading, setUnitImgLoading] = useState(true);
+    const theme = useTheme();
 
     useEffect(() => {
         setUnitImgLoading(true);
     }, [open]);
 
     const factionColor = getFactionColor(unit);
+    const isLight = theme.palette.mode === 'light';
 
     return (
-        <Dialog open={open} onClose={onClose} maxWidth="sm" fullWidth>
-            <DialogTitle>
+        <Dialog
+            open={open}
+            onClose={onClose}
+            maxWidth="sm"
+            fullWidth
+            PaperProps={{
+                sx: {
+                    backgroundColor: isLight
+                        ? theme.palette[factionColor].lighter
+                        : theme.palette[factionColor].darker,
+                },
+            }}
+        >
+            <DialogTitle
+                sx={{
+                    backgroundColor: theme.palette[factionColor].main,
+                    color: theme.palette.getContrastText(theme.palette[factionColor].main),
+                }}
+            >
                 <Typography sx={{ justifyContent: 'center'}}>
                     {unit?.Name || 'Unit Details'}
                 </Typography>

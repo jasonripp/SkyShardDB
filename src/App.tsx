@@ -13,20 +13,21 @@ import UnitTable from './components/UnitTable';
 
 function App() {
   const { mode, setMode } = useColorScheme();
+  const prefersLightMode = useMediaQuery('(prefers-color-scheme: light)');
+  const isSmallScreen = useMediaQuery(theme => theme.breakpoints.down('sm'));
+
   if (!mode) {
     return <CircularProgress />;
   }
+  if (mode === 'system') {
+    setMode(prefersLightMode ? 'light' : 'dark');
+  }
+
   const handleModeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setMode(event.target.checked ? 'dark' : 'light');
   }
-  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
-  const effectiveMode =
-    mode === 'system'
-      ? (prefersDarkMode ? 'dark' : 'light')
-      : mode;
-  const logoSrc = effectiveMode === 'dark' ? 'images/LogoWhite.png' : 'images/LogoBlack.png';
 
-  const isSmallScreen = useMediaQuery(theme => theme.breakpoints.down('sm'));
+  const logoSrc = mode === 'light' ? 'images/LogoBlack.png' : 'images/LogoWhite.png';
 
   const buildDate = new Date(import.meta.env.VITE_APP_BUILD_DATE).toLocaleString('en-US', {
     year: 'numeric',
@@ -49,7 +50,7 @@ function App() {
                   <PatchInfo />
                 </Grid>
                 <Grid>
-                  <ModeSwitch sx={{ mb: 1 }} checked={effectiveMode === 'dark'} onChange={handleModeChange} />
+                  <ModeSwitch sx={{ mb: 1 }} checked={mode === 'dark'} onChange={handleModeChange} />
                 </Grid>
               </Grid>
             </Grid>

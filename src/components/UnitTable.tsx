@@ -7,10 +7,12 @@ import {
 import { useQuery } from '@tanstack/react-query';
 
 import Box from '@mui/material/Box';
+import Chip from '@mui/material/Chip';
 import Skeleton from '@mui/material/Skeleton';
+import { useTheme } from '@mui/material/styles';
 
 import UnitDialog from './UnitDialog';
-import { getHintLabel } from '../util';
+import { getHintLabel, getFactionColor } from '../util';
 
 export type Unit = {
     ID: number;
@@ -89,6 +91,37 @@ const fetchUnitData = async () => {
     }
 };
 
+const UnitImageCell: React.FC<{ id: number; name: string }> = ({ id, name }) => {
+    const [imgLoading, setImgLoading] = useState(true);
+    return (
+        <Box sx={{ width: 50 }}>
+            {imgLoading && (
+                <Skeleton
+                    variant="rectangular"
+                    width={50}
+                    height={50}
+                />
+            )}
+            <img
+                src={`images/units/sm/unit_${String(id).padStart(3, '0')}.png`}
+                alt={name}
+                style={{
+                    width: 50,
+                    height: 50,
+                    objectFit: 'contain',
+                    aspectRatio: '1 / 1',
+                    display: imgLoading ? 'none' : 'block',
+                }}
+                onLoad={() => setImgLoading(false)}
+                onError={(e) => {
+                    (e.target as HTMLImageElement).src = 'images/units/sm/placeholder.png';
+                    setImgLoading(false);
+                }}
+            />
+        </Box>
+    );
+};
+
 const UnitTable = () => {
     const {
         data, 
@@ -101,6 +134,7 @@ const UnitTable = () => {
 
     const [dialogOpen, setDialogOpen] = useState(false);
     const [selectedUnit, setSelectedUnit] = useState<Unit | null>(null);
+    const theme = useTheme();
 
 
     const handleRowClick = (row: any) => {
@@ -189,36 +223,7 @@ const UnitTable = () => {
                 id: 'Image',
                 header: 'Image',
                 columnDefType: 'display',
-                Cell: ({ row }) => {
-                    const [imgLoading, setImgLoading] = useState(true);
-                    return (
-                        <Box sx={{ width: 50 }}>
-                            {imgLoading && (
-                                <Skeleton
-                                    variant="rectangular"
-                                    width={50}
-                                    height={50}
-                                />
-                            )}
-                            <img
-                                src={`images/units/sm/unit_${String(row.original.ID).padStart(3, '0')}.png`}
-                                alt={row.original.Name}
-                                style={{
-                                    width: 50,
-                                    height: 50,
-                                    objectFit: 'contain',
-                                    aspectRatio: '1 / 1',
-                                    display: imgLoading ? 'none' : 'block',
-                                }}
-                                onLoad={() => setImgLoading(false)}
-                                onError={(e) => {
-                                    (e.target as HTMLImageElement).src = 'images/units/sm/placeholder.png';
-                                    setImgLoading(false);
-                                }}
-                            />
-                        </Box>
-                    );
-                },
+                Cell: ({ row }) => <UnitImageCell id={row.original.ID} name={row.original.Name} />,
                 size: 50,
             },
             {
@@ -237,7 +242,8 @@ const UnitTable = () => {
                 accessorKey: 'Rarity',
                 header: 'Rarity',
                 filterVariant: 'multi-select',
-                Cell: ({ row }) => `Tier ${row.original.Rarity}`,
+                // Cell: ({ row }) => `Tier ${row.original.Rarity}`,
+                Cell: ({ row }) => <Chip label={`Rarity: ${row.original.Rarity}`} color={getFactionColor(row.original)} />,
                 filterSelectOptions: filterOptions.Rarity,
                 filterFn: multiSelectFilterFn,
                 size: 50,
@@ -246,7 +252,8 @@ const UnitTable = () => {
                 accessorKey: 'Faction',
                 header: 'Faction',
                 filterVariant: 'multi-select',
-                Cell: ({ row }) => getHintLabel((row.original as any)['Faction_hint'] || "", row.original.Faction),
+                // Cell: ({ row }) => getHintLabel((row.original as any)['Faction_hint'] || "", row.original.Faction),
+                Cell: ({ row }) => <Chip label={getHintLabel((row.original as any).Faction_hint, row.original.Faction)} color={getFactionColor(row.original)} />,
                 filterSelectOptions: filterOptions.Faction,
                 filterFn: multiSelectFilterFn,
                 size: 50,
@@ -255,7 +262,8 @@ const UnitTable = () => {
                 accessorKey: 'Role',
                 header: 'Role',
                 filterVariant: 'multi-select',
-                Cell: ({ row }) => getHintLabel((row.original as any)['Role_hint'] || "", row.original.Role),
+                // Cell: ({ row }) => getHintLabel((row.original as any)['Role_hint'] || "", row.original.Role),
+                Cell: ({ row }) => <Chip label={getHintLabel((row.original as any).Role_hint, row.original.Role)} color={getFactionColor(row.original)} />,
                 filterSelectOptions: filterOptions.Role,
                 filterFn: multiSelectFilterFn,
                 size: 50,
@@ -264,7 +272,8 @@ const UnitTable = () => {
                 accessorKey: 'Type',
                 header: 'Type',
                 filterVariant: 'multi-select',
-                Cell: ({ row }) => getHintLabel((row.original as any)['Type_hint'] || "", row.original.Type),
+                // Cell: ({ row }) => getHintLabel((row.original as any)['Type_hint'] || "", row.original.Type),
+                Cell: ({ row }) => <Chip label={getHintLabel((row.original as any).Type_hint, row.original.Type)} color={getFactionColor(row.original)} />,
                 filterSelectOptions: filterOptions.Type,
                 filterFn: multiSelectFilterFn,
                 size: 50,
@@ -281,12 +290,24 @@ const UnitTable = () => {
         // positionGlobalFilter: 'left',
         enableStickyHeader: true,
         renderBottomToolbar: false,
-        muiTableBodyRowProps: ({ row }) => ({
-            onClick: () => handleRowClick(row),
-            sx: {
-                cursor: 'pointer',
-            },
-        }),
+        muiTableBodyRowProps: ({ row }) => {
+            const factionColor = getFactionColor(row.original);
+            const isLight = theme.palette.mode === 'light';
+            return {
+                onClick: () => handleRowClick(row),
+                sx: {
+                    cursor: 'pointer',
+                    backgroundColor: isLight
+                        ? theme.palette[factionColor].lighter
+                        : theme.palette[factionColor].darker,
+                    '&:hover': {
+                        backgroundColor: isLight
+                            ? theme.palette[factionColor].light
+                            : theme.palette[factionColor].dark,
+                    },
+                },
+            };
+        },
         muiTableContainerProps: {
             sx: {
                 maxHeight: 'calc(100vh - 250px)',
