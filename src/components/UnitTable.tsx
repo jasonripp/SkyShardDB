@@ -19,7 +19,7 @@ export type Unit = {
     Name: string;
     Info: string;
     InShop: boolean;
-    Conditional: number[];
+    Conditional: (number | string)[];
     Rarity: number;
     Health: number;
     HasDamage: boolean;
@@ -149,7 +149,10 @@ const UnitTable = () => {
 
     const formattedData: Unit[] = useMemo(() => {
         if (!data) return [];
-        return data.map((unitArr: any[]) => {
+        const units: Unit[] = [];
+        const idToName = new Map<string, string>();
+
+        data.forEach((unitArr: any[]) => {
             const unitObj: Partial<Unit & Record<string, any>> = {};
             unitArr.forEach((property) => {
                 if (
@@ -170,8 +173,19 @@ const UnitTable = () => {
                     unitObj[key] = defaultUnit[key as keyof Unit];
                 }
             });
-            return unitObj as Unit;
+            const unit = unitObj as Unit;
+            units.push(unit);
+            idToName.set(String(unit.ID), unit.Name);
         });
+
+        // map Conditional IDs to names
+        units.forEach(unit => {
+            if (Array.isArray(unit.Conditional)) {
+                unit.Conditional = unit.Conditional.map(id => idToName.get(String(id)) || String(id));
+            }
+        });
+
+        return units;
     }, [data]);
 
     const filterOptions = useMemo(() => {

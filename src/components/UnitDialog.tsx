@@ -21,6 +21,7 @@ import { useTheme } from '@mui/material/styles';
 
 import { getHintLabel, getFactionColor } from '../util';
 import type { Unit } from './UnitTable';
+import { Grid } from '@mui/system';
 
 
 interface UnitDialogProps {
@@ -42,13 +43,14 @@ const UnitDialog: React.FC<UnitDialogProps> = ({ open, onClose, unit }) => {
     const isLight = theme.palette.mode === 'light';
 
     const unitTableAttributes = [
-        unit.HasDamage ? { label: 'DPS:', value: String(unit.Damage / unit.AttackSpeed) } : null,
+        unit.HasDamage ? { label: 'DPS:', value: String((unit.Damage / unit.AttackSpeed).toFixed(2)) } : null,
         unit.HasDamage ? { label: 'Projectile Speed:', value: getHintLabel((unit as any).ProjectileSpeed_hint, unit.ProjectileSpeed) } : null,
         { label: 'Size:', value: `${unit.length_x} x ${unit.length_y}` },
         unit.HasDamage ? { label: 'Damage Type:', value: getHintLabel((unit as any).DamageType_hint, unit.DamageType) } : null,
         unit.HasDamage && unit.DamageTypeBonus > 0 ? { label: 'Type Strength:', value: `${unit.DamageTypeBonus}%` } : null,
         (unit.HasDamage || unit.Targeting) ? { label: 'Targeting:', value: getHintLabel((unit as any).Targeting_hint, unit.Targeting) } : null,
         { label: 'Available In Shops:', value: unit.InShop ? 'Yes' : 'No' },
+        Array.isArray(unit.Conditional) && unit.Conditional.length > 0 ? { label: 'Requires:', value: unit.Conditional.join(', ') } : null,
     ].filter((attr): attr is { label: string; value: string } => !!attr);
 
     return (
@@ -102,48 +104,63 @@ const UnitDialog: React.FC<UnitDialogProps> = ({ open, onClose, unit }) => {
                     <Chip label={getHintLabel((unit as any).Role_hint, unit.Role)} color={factionColor} />
                     <Chip label={getHintLabel((unit as any).Type_hint, unit.Type)} color={factionColor} />
                 </Stack>
-                <Box>
-                    <Box sx={{ mb: 2, textAlign: 'center' }}>
-                        {unitImgLoading && (
-                            <Skeleton
-                                variant="rectangular"
-                                width={240}
-                                height={240}
-                                sx={{ margin: '0 auto', display: 'block', maxWidth: 400, maxHeight: 400 }}
+                <Grid container justifyContent="center" alignItems="center" sx={{ mb: 2 }} spacing={2}>
+                    <Grid>
+                        <Stack
+                            direction="column" spacing={5}
+                        >
+                            <Box sx={{ flexGrow: 1 }} >
+                                <Typography variant="body2" color="text.secondary" align="center">Health:</Typography>
+                                <Typography variant="body2" color="text.secondary" align="center">{unit.Health}</Typography>
+                            </Box>
+                            {unit.HasDamage && (
+                                <Box sx={{ flexGrow: 1 }} >
+                                    <Typography variant="body2" color="text.secondary" align="center">Damage:</Typography>
+                                    <Typography variant="body2" color="text.secondary" align="center">{unit.Damage}</Typography>
+                                </Box>
+                            )}
+                            {unit.HasSpeed && (
+                                <Box sx={{ flexGrow: 1 }} >
+                                    <Typography variant="body2" color="text.secondary" align="center">Speed:</Typography>
+                                    <Typography variant="body2" color="text.secondary" align="center">{unit.AttackSpeed.toFixed(2)}s</Typography>
+                                </Box>
+                            )}
+                        </Stack>
+                    </Grid>
+                    <Grid>
+                        <Box sx={{ mb: 2, textAlign: 'center' }}>
+                            {unitImgLoading && (
+                                <Skeleton
+                                    variant="rectangular"
+                                    width={240}
+                                    height={240}
+                                    sx={{ margin: '0 auto', display: 'block', maxWidth: 400, maxHeight: 400 }}
+                                />
+                            )}
+                            <img
+                                src={`images/units/unit_${String(unit.ID).padStart(3, '0')}.png`}
+                                alt={unit.Name}
+                                style={{
+                                    width: '100%',
+                                    height: 'auto',
+                                    maxWidth: 400,
+                                    maxHeight: 400,
+                                    objectFit: 'contain',
+                                    aspectRatio: '1 / 1',
+                                    display: unitImgLoading ? 'none' : 'block',
+                                    margin: '0 auto',
+                                }}
+                                onLoad={() => setUnitImgLoading(false)}
+                                onError={(e) => {
+                                    (e.target as HTMLImageElement).src = 'images/units/placeholder.png';
+                                    setUnitImgLoading(false);
+                                }}
                             />
-                        )}
-                        <img
-                            src={`images/units/unit_${String(unit.ID).padStart(3, '0')}.png`}
-                            alt={unit.Name}
-                            style={{
-                                width: '100%',
-                                height: 'auto',
-                                maxWidth: 400,
-                                maxHeight: 400,
-                                objectFit: 'contain',
-                                aspectRatio: '1 / 1',
-                                display: unitImgLoading ? 'none' : 'block',
-                                margin: '0 auto',
-                            }}
-                            onLoad={() => setUnitImgLoading(false)}
-                            onError={(e) => {
-                                (e.target as HTMLImageElement).src = 'images/units/placeholder.png';
-                                setUnitImgLoading(false);
-                            }}
-                        />
-                    </Box>
-                </Box>
+                        </Box>
+                    </Grid>
+                </Grid>
                 <TableContainer component={Paper} sx={{ mb: 2 }}>
                     <Table size="small" aria-label="unit stats table">
-                        {/* <TableHead>
-                            <TableRow>
-                                <TableCell>Dessert (100g serving)</TableCell>
-                                <TableCell align="right">Calories</TableCell>
-                                <TableCell align="right">Fat&nbsp;(g)</TableCell>
-                                <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-                                <TableCell align="right">Protein&nbsp;(g)</TableCell>
-                            </TableRow>
-                        </TableHead> */}
                         <TableBody>
                             {unitTableAttributes.map(attr => (
                                 <TableRow
