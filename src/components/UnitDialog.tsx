@@ -118,7 +118,7 @@ const UnitDialog: React.FC<UnitDialogProps> = ({ open, onClose, unit }) => {
             <DialogContent dividers>
                 <Stack
                     direction="row"
-                    spacing={2}
+                    spacing={{ xs: 1, sm: 2 }}
                     sx={{
                         mb: 2,
                         justifyContent: 'center',
@@ -139,7 +139,7 @@ const UnitDialog: React.FC<UnitDialogProps> = ({ open, onClose, unit }) => {
                     }}
                 >
                     <Grid>
-                        <Stack direction="column" spacing={5}>
+                        <Stack direction={{ xs: 'row', sm: 'column' }} spacing={{ xs: 2, sm: 2 }} >
                             <Paper sx={{ flexGrow: 1, p: 1 }}>
                                 <StatTypography statType="health">Health:</StatTypography>
                                 <StatTypography statType="health">{unit.Health}</StatTypography>
