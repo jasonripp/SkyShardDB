@@ -9,6 +9,11 @@ import IconButton from '@mui/material/IconButton';
 import Paper from '@mui/material/Paper';
 import Skeleton from '@mui/material/Skeleton';
 import Stack from '@mui/material/Stack';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableRow from '@mui/material/TableRow';
 import Typography from '@mui/material/Typography';
 
 import CloseIcon from '@mui/icons-material/Close';
@@ -36,6 +41,16 @@ const UnitDialog: React.FC<UnitDialogProps> = ({ open, onClose, unit }) => {
     const factionColor = getFactionColor(unit);
     const isLight = theme.palette.mode === 'light';
 
+    const unitTableAttributes = [
+        unit.HasDamage ? { label: 'DPS:', value: String(unit.Damage / unit.AttackSpeed) } : null,
+        unit.HasDamage ? { label: 'Projectile Speed:', value: getHintLabel((unit as any).ProjectileSpeed_hint, unit.ProjectileSpeed) } : null,
+        { label: 'Size:', value: `${unit.length_x} x ${unit.length_y}` },
+        unit.HasDamage ? { label: 'Damage Type:', value: getHintLabel((unit as any).DamageType_hint, unit.DamageType) } : null,
+        unit.HasDamage && unit.DamageTypeBonus > 0 ? { label: 'Type Strength:', value: `${unit.DamageTypeBonus}%` } : null,
+        (unit.HasDamage || unit.Targeting) ? { label: 'Targeting:', value: getHintLabel((unit as any).Targeting_hint, unit.Targeting) } : null,
+        { label: 'Available In Shops:', value: unit.InShop ? 'Yes' : 'No' },
+    ].filter((attr): attr is { label: string; value: string } => !!attr);
+
     return (
         <Dialog
             open={open}
@@ -54,9 +69,10 @@ const UnitDialog: React.FC<UnitDialogProps> = ({ open, onClose, unit }) => {
                 sx={{
                     backgroundColor: theme.palette[factionColor].main,
                     color: theme.palette.getContrastText(theme.palette[factionColor].main),
+                    textAlign: 'center',
                 }}
             >
-                <Typography sx={{ justifyContent: 'center'}}>
+                <Typography >
                     {unit?.Name || 'Unit Details'}
                 </Typography>
             </DialogTitle>
@@ -78,7 +94,7 @@ const UnitDialog: React.FC<UnitDialogProps> = ({ open, onClose, unit }) => {
                     spacing={1}
                     sx={{
                         mb: 2,
-                        justifyContent: 'center', 
+                        justifyContent: 'center',
                     }}
                 >
                     <Chip label={`Rarity: ${unit.Rarity}`} color={factionColor} />
@@ -116,10 +132,35 @@ const UnitDialog: React.FC<UnitDialogProps> = ({ open, onClose, unit }) => {
                             }}
                         />
                     </Box>
-                    <Paper variant="outlined" sx={{ p: 1,  }}>
-                        <Typography variant="body1" align="center">{unit.Info}</Typography>
-                    </Paper>
                 </Box>
+                <TableContainer component={Paper} sx={{ mb: 2 }}>
+                    <Table size="small" aria-label="unit stats table">
+                        {/* <TableHead>
+                            <TableRow>
+                                <TableCell>Dessert (100g serving)</TableCell>
+                                <TableCell align="right">Calories</TableCell>
+                                <TableCell align="right">Fat&nbsp;(g)</TableCell>
+                                <TableCell align="right">Carbs&nbsp;(g)</TableCell>
+                                <TableCell align="right">Protein&nbsp;(g)</TableCell>
+                            </TableRow>
+                        </TableHead> */}
+                        <TableBody>
+                            {unitTableAttributes.map(attr => (
+                                <TableRow
+                                    key={attr.label}
+                                    sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                                >
+                                    <TableCell align="right" width="50%">{attr.label}</TableCell>
+                                    <TableCell align="left">{attr.value}</TableCell>
+                                </TableRow>
+                            ))}
+                        </TableBody>
+                    </Table>
+                </TableContainer>
+                <Paper variant="outlined" sx={{ p: 1, }}>
+                    <Typography variant="body1" align="center">{unit.Info}</Typography>
+                </Paper>
+
             </DialogContent>
         </Dialog>
     );
