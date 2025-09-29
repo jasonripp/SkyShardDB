@@ -40,7 +40,7 @@ function App() {
   return (
     <>
       <CssBaseline />
-      <Container maxWidth="xl">
+      <Container maxWidth="xl" sx={{ height: '100vh', display: 'flex', flexDirection: 'column', minHeight: 0 }}>
         <Box>
           <Grid container justifyContent="space-between" alignItems="flex-end" >
             <Grid >
@@ -63,7 +63,9 @@ function App() {
             </Grid>
           </Grid>
         </Box>
-        <UnitTable />
+        <Box sx={{ flex: 1, minHeight: 0, display: 'flex', flexDirection: 'column' }}>
+          <UnitTable />
+        </Box>
         <Box>
           <Typography variant="caption">
             Last built: {buildDate || "unknown"}

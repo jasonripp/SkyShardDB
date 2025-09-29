@@ -308,9 +308,14 @@ const UnitTable = () => {
                 },
             };
         },
-        muiTableContainerProps: {
+        muiTableContainerProps: ({ table }: any) => ({
             sx: {
-                maxHeight: 'calc(100vh - 250px)',
+                height: `calc(100% - ${table.refs.topToolbarRef.current?.offsetHeight || 0}px - ${table.refs.bottomToolbarRef.current?.offsetHeight || 0}px)`
+            }
+        }),
+        muiTablePaperProps: {
+            sx: {
+                height: '100%'
             }
         },
         initialState: {
