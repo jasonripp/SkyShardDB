@@ -17,6 +17,7 @@ import TableRow from '@mui/material/TableRow';
 import Typography from '@mui/material/Typography';
 
 import CloseIcon from '@mui/icons-material/Close';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import { styled, useTheme } from '@mui/material/styles';
 
 import { getHintLabel, getFactionColor } from '../util';
@@ -59,6 +60,7 @@ const UnitDialog: React.FC<UnitDialogProps> = ({ open, onClose, unit }) => {
 
     const [unitImgLoading, setUnitImgLoading] = useState(true);
     const theme = useTheme();
+    const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
 
     useEffect(() => {
         setUnitImgLoading(true);
@@ -84,6 +86,7 @@ const UnitDialog: React.FC<UnitDialogProps> = ({ open, onClose, unit }) => {
             onClose={onClose}
             maxWidth="sm"
             fullWidth
+            fullScreen={fullScreen}
             PaperProps={{
                 sx: {
                     backgroundColor: isLight
