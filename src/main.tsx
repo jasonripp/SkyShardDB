@@ -18,6 +18,9 @@ declare module '@mui/material/styles' {
     factionAncient: Palette['primary'];
     factionNovus: Palette['primary'];
     factionNature: Palette['primary'];
+    unitHealth: Palette['primary'];
+    unitDamage: Palette['primary'];
+    unitSpeed: Palette['primary'];
   }
 
   interface PaletteOptions {
@@ -27,6 +30,9 @@ declare module '@mui/material/styles' {
     factionAncient?: PaletteOptions['primary'];
     factionNovus?: PaletteOptions['primary'];
     factionNature?: PaletteOptions['primary'];
+    unitHealth?: PaletteOptions['primary'];
+    unitDamage?: PaletteOptions['primary'];
+    unitSpeed?: PaletteOptions['primary'];
   }
 
   interface PaletteColor {
@@ -46,13 +52,21 @@ declare module '@mui/material/Chip' {
   }
 }
 
+declare module '@mui/material/Typography' {
+  interface TypographyPropsColorOverrides {
+    unitHealth: true;
+    unitDamage: true;
+    unitSpeed: true;
+  }
+}
+
 let theme = createTheme({
   colorSchemes: {
     light: true,
     dark: true,
   },
 });
-const makeFactionColor = (main: string) => {
+const makeCustomColor = (main: string) => {
   const color = theme.palette.augmentColor({ color: { main } });
   (color as any).lighter = theme.lighten(color.light, 0.5);
   (color as any).darker = theme.darken(color.dark, 0.5);
@@ -62,12 +76,15 @@ const makeFactionColor = (main: string) => {
 theme = createTheme(theme, {
 
   palette: {
-    factionBasic: makeFactionColor('#55504F'),
-    factionTinker: makeFactionColor('#625205'),
-    factionMagic: makeFactionColor('#62086A'),
-    factionAncient: makeFactionColor('#491213'),
-    factionNovus: makeFactionColor('#1D376B'),
-    factionNature: makeFactionColor('#294305'),
+    factionBasic: makeCustomColor('#55504F'),
+    factionTinker: makeCustomColor('#625205'),
+    factionMagic: makeCustomColor('#62086A'),
+    factionAncient: makeCustomColor('#491213'),
+    factionNovus: makeCustomColor('#1D376B'),
+    factionNature: makeCustomColor('#294305'),
+    unitHealth: makeCustomColor('#4BFF33'),
+    unitDamage: makeCustomColor('#FF4939'),
+    unitSpeed: makeCustomColor('#8DB2FF'),
   },
 });
 

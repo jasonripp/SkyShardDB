@@ -17,7 +17,7 @@ import TableRow from '@mui/material/TableRow';
 import Typography from '@mui/material/Typography';
 
 import CloseIcon from '@mui/icons-material/Close';
-import { useTheme } from '@mui/material/styles';
+import { styled, useTheme } from '@mui/material/styles';
 
 import { getHintLabel, getFactionColor } from '../util';
 import type { Unit } from './UnitTable';
@@ -29,6 +29,31 @@ interface UnitDialogProps {
     onClose: () => void;
     unit: Unit;
 }
+
+const StatTypography = styled(Typography, {
+    shouldForwardProp: (prop) => prop !== 'statType',
+})<{ statType: 'health' | 'damage' | 'speed' }>(({ theme, statType }) => {
+    const isLight = theme.palette.mode === 'light';
+    let color;
+    switch (statType) {
+        case 'health':
+            color = isLight ? theme.palette.unitHealth.dark : theme.palette.unitHealth.main;
+            break;
+        case 'damage':
+            color = isLight ? theme.palette.unitDamage.dark : theme.palette.unitDamage.main;
+            break;
+        case 'speed':
+            color = isLight ? theme.palette.unitSpeed.dark : theme.palette.unitSpeed.main;
+            break;
+        default:
+            color = theme.palette.text.primary;
+    }
+    return {
+        color,
+        textAlign: 'center',
+        fontWeight: 'bold',
+    };
+});
 
 const UnitDialog: React.FC<UnitDialogProps> = ({ open, onClose, unit }) => {
 
@@ -93,7 +118,7 @@ const UnitDialog: React.FC<UnitDialogProps> = ({ open, onClose, unit }) => {
             <DialogContent dividers>
                 <Stack
                     direction="row"
-                    spacing={1}
+                    spacing={2}
                     sx={{
                         mb: 2,
                         justifyContent: 'center',
@@ -104,26 +129,32 @@ const UnitDialog: React.FC<UnitDialogProps> = ({ open, onClose, unit }) => {
                     <Chip label={getHintLabel((unit as any).Role_hint, unit.Role)} color={factionColor} />
                     <Chip label={getHintLabel((unit as any).Type_hint, unit.Type)} color={factionColor} />
                 </Stack>
-                <Grid container justifyContent="center" alignItems="center" sx={{ mb: 2 }} spacing={2}>
+                <Grid
+                    container
+                    spacing={2}
+                    sx={{
+                        mb: 2,
+                        alignItems: 'center',
+                        justifyContent: 'space-evenly',
+                    }}
+                >
                     <Grid>
-                        <Stack
-                            direction="column" spacing={5}
-                        >
-                            <Box sx={{ flexGrow: 1 }} >
-                                <Typography variant="body2" color="text.secondary" align="center">Health:</Typography>
-                                <Typography variant="body2" color="text.secondary" align="center">{unit.Health}</Typography>
-                            </Box>
+                        <Stack direction="column" spacing={5}>
+                            <Paper sx={{ flexGrow: 1, p: 1 }}>
+                                <StatTypography statType="health">Health:</StatTypography>
+                                <StatTypography statType="health">{unit.Health}</StatTypography>
+                            </Paper>
                             {unit.HasDamage && (
-                                <Box sx={{ flexGrow: 1 }} >
-                                    <Typography variant="body2" color="text.secondary" align="center">Damage:</Typography>
-                                    <Typography variant="body2" color="text.secondary" align="center">{unit.Damage}</Typography>
-                                </Box>
+                                <Paper sx={{ flexGrow: 1, p: 1 }}>
+                                    <StatTypography statType="damage">Damage:</StatTypography>
+                                    <StatTypography statType="damage">{unit.Damage}</StatTypography>
+                                </Paper>
                             )}
                             {unit.HasSpeed && (
-                                <Box sx={{ flexGrow: 1 }} >
-                                    <Typography variant="body2" color="text.secondary" align="center">Speed:</Typography>
-                                    <Typography variant="body2" color="text.secondary" align="center">{unit.AttackSpeed.toFixed(2)}s</Typography>
-                                </Box>
+                                <Paper sx={{ flexGrow: 1, p: 1 }}>
+                                    <StatTypography statType="speed">Speed:</StatTypography>
+                                    <StatTypography statType="speed">{unit.AttackSpeed.toFixed(2)}s</StatTypography>
+                                </Paper>
                             )}
                         </Stack>
                     </Grid>
