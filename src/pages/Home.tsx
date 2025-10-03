@@ -65,7 +65,7 @@ const Home: React.FC = () => {
                         <strong>Contact:</strong> SkyShardDB made by Araym.  For any questions, feedback, or comments, please reach out to me on the game's Discord.
                     </Typography>
                     <Typography variant="body2"  sx={{ mt: 2 }}>
-                        This site is not affiliated with the publishers or developers of Project SkyShard, but all images and data have been used with permission. All trademarks are property of their respective owners.
+                        This site is not affiliated with the publishers or developers of Project SkyShard, and all images and data have been used with permission. All trademarks are property of their respective owners.
                     </Typography>
                 </Paper>
             </Box>
@@ -73,13 +73,15 @@ const Home: React.FC = () => {
             <Grid container spacing={3} justifyContent="center">
                 <Grid size={{ xs: 12, md: 4 }}>
                     <Card sx={{ height: '100%' }}>
-                        <CardContent>
-                            <Typography variant="h5" component="h2" gutterBottom>
-                                Unit Database
-                            </Typography>
-                            <Typography variant="body1" component="p" gutterBottom>
-                                View, filter, and sort detailed the stats, information, and attributes of all units in SkyShard.
-                            </Typography>
+                        <CardContent sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%' }}>
+                            <Box>
+                                <Typography variant="h5" component="h2" gutterBottom>
+                                    Unit Database
+                                </Typography>
+                                <Typography variant="body1" component="p" gutterBottom>
+                                    View, filter, and sort detailed the stats, information, and attributes of all units in SkyShard.
+                                </Typography>
+                            </Box>
                             <Button
                                 variant="contained"
                                 onClick={() => navigate('/units')}
@@ -93,13 +95,15 @@ const Home: React.FC = () => {
 
                 <Grid size={{ xs: 12, md: 4 }}>
                     <Card sx={{ height: '100%' }}>
-                        <CardContent>
-                            <Typography variant="h5" component="h2" gutterBottom>
-                                Enchantment Database
-                            </Typography>
-                            <Typography variant="body1" component="p" gutterBottom>
-                                View enchantment data and effects (Coming Soon).
-                            </Typography>
+                        <CardContent sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%' }}>
+                            <Box>
+                                <Typography variant="h5" component="h2" gutterBottom>
+                                    Enchantment Database
+                                </Typography>
+                                <Typography variant="body1" component="p" gutterBottom>
+                                    View enchantment data and effects (Coming Soon).
+                                </Typography>
+                            </Box>
                             <Button
                                 variant="contained"
                                 onClick={() => navigate('/enchantments')}
@@ -113,13 +117,15 @@ const Home: React.FC = () => {
 
                 <Grid size={{ xs: 12, md: 4 }}>
                     <Card sx={{ height: '100%' }}>
-                        <CardContent>
-                            <Typography variant="h5" component="h2" gutterBottom>
-                                Encounter Database
-                            </Typography>
-                            <Typography variant="body1" component="p" gutterBottom>
-                                View encounter data including shops and quests (Coming Soon).
-                            </Typography>
+                        <CardContent sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%' }}>
+                            <Box>
+                                <Typography variant="h5" component="h2" gutterBottom>
+                                    Encounter Database
+                                </Typography>
+                                <Typography variant="body1" component="p" gutterBottom>
+                                    View encounter data including shops and quests (Coming Soon).
+                                </Typography>
+                            </Box>
                             <Button
                                 variant="contained"
                                 onClick={() => navigate('/encounters')}

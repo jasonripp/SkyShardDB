@@ -4,21 +4,21 @@ import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
 
 const EnchantmentsPage: React.FC = () => {
-  return (
-    <Container maxWidth="xl" sx={{ py: 2 }}>
-      <Typography variant="h4" component="h1" gutterBottom>
-        Enchantment Database
-      </Typography>
-      <Paper sx={{ p: 3, textAlign: 'center' }}>
-        <Typography variant="h6" color="text.secondary">
-          Enchantment database coming soon...
-        </Typography>
-        <Typography variant="body1" sx={{ mt: 2 }}>
-          This page will contain detailed enchantment information.
-        </Typography>
-      </Paper>
-    </Container>
-  );
+    return (
+        <Container maxWidth="xl" sx={{ py: 2 }}>
+            <Typography variant="h4" component="h1" gutterBottom>
+                Enchantment Database
+            </Typography>
+            <Paper sx={{ p: 3, textAlign: 'center' }}>
+                <Typography variant="h6" color="text.secondary">
+                    Enchantment database coming soon...
+                </Typography>
+                <Typography variant="body1" sx={{ mt: 2 }}>
+                    This page will contain detailed enchantment information.
+                </Typography>
+            </Paper>
+        </Container>
+    );
 };
 
 export default EnchantmentsPage;
