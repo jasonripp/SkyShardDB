@@ -7,7 +7,22 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 export type FactionColor = 'factionBasic' | 'factionTinker' | 'factionMagic' | 'factionAncient' | 'factionNovus' | 'factionNature';
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      // staleTime: 1000 * 60 * 5, // 5 minutes
+      staleTime: Infinity,
+      gcTime: 1000 * 60 * 60, // 1 hour
+      retry: 2,
+      refetchOnWindowFocus: false,
+      refetchOnReconnect: true,
+      refetchOnMount: false,
+    },
+    mutations: {
+      retry: 1,
+    },
+  },
+});
 
 // Augment the palette to include an ochre color
 declare module '@mui/material/styles' {

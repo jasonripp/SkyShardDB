@@ -1,10 +1,11 @@
-import { useMemo, useState } from 'react';
+import { useMemo, useState, useEffect } from 'react';
 import {
     MaterialReactTable,
     useMaterialReactTable,
     type MRT_ColumnDef,
 } from 'material-react-table';
 import { useQuery } from '@tanstack/react-query';
+import { useUnitTableState } from '../context/UnitTableContext';
 
 import Box from '@mui/material/Box';
 import Chip from '@mui/material/Chip';
@@ -89,9 +90,9 @@ const fetchUnitData = async () => {
         if (!localResponse.ok) throw new Error('Local fetch failed');
         return localResponse.json();
     }
-};
+}
 
-const UnitImageCell: React.FC<{ id: number; name: string }> = ({ id, name }) => {
+function UnitImageCell({ id, name }: { id: number; name: string }) {
     const [imgLoading, setImgLoading] = useState(true);
     return (
         <Box sx={{ width: 50 }}>
@@ -120,11 +121,12 @@ const UnitImageCell: React.FC<{ id: number; name: string }> = ({ id, name }) => 
             />
         </Box>
     );
-};
+}
 
-const UnitTable = () => {
+function UnitTable() {
+    const { state, setState } = useUnitTableState();
     const {
-        data, 
+        data,
         isLoading: isLoadingUnits,
         error,
     } = useQuery({
@@ -136,6 +138,11 @@ const UnitTable = () => {
     const [selectedUnit, setSelectedUnit] = useState<Unit | null>(null);
     const theme = useTheme();
 
+    useEffect(() => {
+        if (data && data !== state.data) {
+            setState(prev => ({ ...prev, data }));
+        }
+    }, [data, setState, state.data]);
 
     const handleRowClick = (row: any) => {
         setSelectedUnit(row.original);
@@ -161,13 +168,11 @@ const UnitTable = () => {
                     unitKeys.includes(property.var)
                 ) {
                     unitObj[property.var] = property.value;
-                    // If there's a hint, store it as `${var}_hint`
                     if (property.hint) {
                         unitObj[`${property.var}_hint`] = property.hint;
                     }
                 }
             });
-            // Fill missing fields with defaults
             unitKeys.forEach((key) => {
                 if (unitObj[key] === undefined) {
                     unitObj[key] = defaultUnit[key as keyof Unit];
@@ -177,19 +182,15 @@ const UnitTable = () => {
             units.push(unit);
             idToName.set(String(unit.ID), unit.Name);
         });
-
-        // map Conditional IDs to names
         units.forEach(unit => {
             if (Array.isArray(unit.Conditional)) {
                 unit.Conditional = unit.Conditional.map(id => idToName.get(String(id)) || String(id));
             }
         });
-
         return units;
     }, [data]);
 
     const filterOptions = useMemo(() => {
-        // Helper to get options for a key
         const getOptions = (
             key: keyof Unit,
             hintKey?: string,
@@ -204,7 +205,6 @@ const UnitTable = () => {
                     label: labelFn ? labelFn(val, hint) : getHintLabel(hint, typeof val === 'string' || typeof val === 'number' ? val : String(val)),
                 };
             }).sort((a, b) => {
-                // Numeric sort if both are numbers, otherwise string sort
                 if (typeof a.value === 'number' && typeof b.value === 'number') {
                     return a.value - b.value;
                 }
@@ -225,117 +225,110 @@ const UnitTable = () => {
         return filterValues.includes(row.getValue(columnId));
     }
 
-    const columns = useMemo<MRT_ColumnDef<Unit>[]>(
-        () => [
-            {
-                accessorKey: 'ID',
-                header: 'ID',
-                enableColumnFilter: false,
-                size: 10,
-            },
-            {
-                id: 'Image',
-                header: 'Image',
-                columnDefType: 'display',
-                Cell: ({ row }) => <UnitImageCell id={row.original.ID} name={row.original.Name} />,
-                size: 50,
-            },
-            {
-                accessorKey: 'Name',
-                header: 'Name',
-                size: 180,
-            },
-            {
-                accessorKey: 'Info',
-                header: 'Info',
-                filterFn: 'contains',
-                size: 300,
-                grow: true,
-            },
-            {
-                accessorKey: 'Rarity',
-                header: 'Rarity',
-                filterVariant: 'multi-select',
-                // Cell: ({ row }) => `Tier ${row.original.Rarity}`,
-                Cell: ({ row }) => <Chip label={`Rarity: ${row.original.Rarity}`} color={getFactionColor(row.original)} />,
-                filterSelectOptions: filterOptions.Rarity,
-                filterFn: multiSelectFilterFn,
-                size: 50,
-            },
-            {
-                accessorKey: 'Faction',
-                header: 'Faction',
-                filterVariant: 'multi-select',
-                // Cell: ({ row }) => getHintLabel((row.original as any)['Faction_hint'] || "", row.original.Faction),
-                Cell: ({ row }) => <Chip label={getHintLabel((row.original as any).Faction_hint, row.original.Faction)} color={getFactionColor(row.original)} />,
-                filterSelectOptions: filterOptions.Faction,
-                filterFn: multiSelectFilterFn,
-                size: 50,
-            },
-            {
-                accessorKey: 'Role',
-                header: 'Role',
-                filterVariant: 'multi-select',
-                // Cell: ({ row }) => getHintLabel((row.original as any)['Role_hint'] || "", row.original.Role),
-                Cell: ({ row }) => <Chip label={getHintLabel((row.original as any).Role_hint, row.original.Role)} color={getFactionColor(row.original)} />,
-                filterSelectOptions: filterOptions.Role,
-                filterFn: multiSelectFilterFn,
-                size: 50,
-            },
-            {
-                accessorKey: 'Type',
-                header: 'Type',
-                filterVariant: 'multi-select',
-                // Cell: ({ row }) => getHintLabel((row.original as any)['Type_hint'] || "", row.original.Type),
-                Cell: ({ row }) => <Chip label={getHintLabel((row.original as any).Type_hint, row.original.Type)} color={getFactionColor(row.original)} />,
-                filterSelectOptions: filterOptions.Type,
-                filterFn: multiSelectFilterFn,
-                size: 50,
-            },
-            {
-                accessorKey: 'Health',
-                header: 'Health',
-                enableColumnFilter: false,
-                size: 50,
-            },
-            {
-                accessorKey: 'Damage',
-                header: 'Damage',
-                enableColumnFilter: false,
-                Cell: ({ row }) => row.original.HasDamage ? row.original.Damage : '—',
-                size: 50,
-            },
-            {
-                accessorKey: 'AttackSpeed',
-                header: 'Speed',
-                enableColumnFilter: false,
-                Cell: ({ row }) => row.original.HasSpeed ? `${row.original.AttackSpeed.toFixed(2)}s` : '—',
-                size: 50,
-            },
-            {
-                accessorKey: 'InShop',
-                header: 'In Shops?',
-                filterVariant: 'checkbox',
-                Cell: ({ row }) => row.original.InShop ? 'Yes' : 'No',
-                filterFn: 'equals',
-                size: 50,
-            },
-            { accessorKey: 'Conditional',
-                header: 'Requires',
-                enableColumnFilter: false,
-                Cell: ({ row }) => Array.isArray(row.original.Conditional) && row.original.Conditional.length > 0 ? row.original.Conditional.join(', ') : '—',
-                size: 100,
-            },
-        ],
-        [formattedData, filterOptions],
-    );
+    const columns = useMemo<MRT_ColumnDef<Unit>[]>(() => [
+        {
+            accessorKey: 'ID',
+            header: 'ID',
+            enableColumnFilter: false,
+            size: 10,
+        },
+        {
+            id: 'Image',
+            header: 'Image',
+            columnDefType: 'display',
+            Cell: ({ row }) => <UnitImageCell id={row.original.ID} name={row.original.Name} />,
+            size: 50,
+        },
+        {
+            accessorKey: 'Name',
+            header: 'Name',
+            size: 180,
+        },
+        {
+            accessorKey: 'Info',
+            header: 'Info',
+            filterFn: 'contains',
+            size: 300,
+            grow: true,
+        },
+        {
+            accessorKey: 'Rarity',
+            header: 'Rarity',
+            filterVariant: 'multi-select',
+            Cell: ({ row }) => <Chip label={`Rarity: ${row.original.Rarity}`} color={getFactionColor(row.original)} />,
+            filterSelectOptions: filterOptions.Rarity,
+            filterFn: multiSelectFilterFn,
+            size: 50,
+        },
+        {
+            accessorKey: 'Faction',
+            header: 'Faction',
+            filterVariant: 'multi-select',
+            Cell: ({ row }) => <Chip label={getHintLabel((row.original as any).Faction_hint, row.original.Faction)} color={getFactionColor(row.original)} />,
+            filterSelectOptions: filterOptions.Faction,
+            filterFn: multiSelectFilterFn,
+            size: 50,
+        },
+        {
+            accessorKey: 'Role',
+            header: 'Role',
+            filterVariant: 'multi-select',
+            Cell: ({ row }) => <Chip label={getHintLabel((row.original as any).Role_hint, row.original.Role)} color={getFactionColor(row.original)} />,
+            filterSelectOptions: filterOptions.Role,
+            filterFn: multiSelectFilterFn,
+            size: 50,
+        },
+        {
+            accessorKey: 'Type',
+            header: 'Type',
+            filterVariant: 'multi-select',
+            Cell: ({ row }) => <Chip label={getHintLabel((row.original as any).Type_hint, row.original.Type)} color={getFactionColor(row.original)} />,
+            filterSelectOptions: filterOptions.Type,
+            filterFn: multiSelectFilterFn,
+            size: 50,
+        },
+        {
+            accessorKey: 'Health',
+            header: 'Health',
+            enableColumnFilter: false,
+            size: 50,
+        },
+        {
+            accessorKey: 'Damage',
+            header: 'Damage',
+            enableColumnFilter: false,
+            Cell: ({ row }) => row.original.HasDamage ? row.original.Damage : '—',
+            size: 50,
+        },
+        {
+            accessorKey: 'AttackSpeed',
+            header: 'Speed',
+            enableColumnFilter: false,
+            Cell: ({ row }) => row.original.HasSpeed ? `${row.original.AttackSpeed.toFixed(2)}s` : '—',
+            size: 50,
+        },
+        {
+            accessorKey: 'InShop',
+            header: 'In Shops?',
+            filterVariant: 'checkbox',
+            Cell: ({ row }) => row.original.InShop ? 'Yes' : 'No',
+            filterFn: 'equals',
+            size: 50,
+        },
+        {
+            accessorKey: 'Conditional',
+            header: 'Requires',
+            enableColumnFilter: false,
+            Cell: ({ row }) => Array.isArray(row.original.Conditional) && row.original.Conditional.length > 0 ? row.original.Conditional.join(', ') : '—',
+            size: 100,
+        },
+    ], [formattedData, filterOptions]);
 
     const table = useMaterialReactTable({
         columns,
         data: formattedData,
         enableFacetedValues: true,
         enablePagination: false,
-        // positionGlobalFilter: 'left',
         enableStickyHeader: true,
         renderBottomToolbar: false,
         muiTableBodyRowProps: ({ row }) => {
@@ -366,38 +359,35 @@ const UnitTable = () => {
                 height: '100%'
             }
         },
-        initialState: {
-            columnVisibility: {
-                ID: false,
-                Health: false,
-                Damage: false,
-                AttackSpeed: false,
-                InShop: false,
-                Conditional: false,
-            },
-            showColumnFilters: true,
-            showGlobalFilter: true,
-            sorting: [
-                {
-                    id: 'Rarity',
-                    desc: false,
-                },
-                {
-                    id: 'Faction',
-                    desc: false,
-                },
-                {
-                    id: 'Role',
-                    desc: false
-                },
-                {
-                    id: 'Type',
-                    desc: false
-                }
-            ],
-        },
+        initialState: {},
         state: {
             isLoading: isLoadingUnits,
+            columnVisibility: state.columnVisibility,
+            sorting: state.sorting,
+            columnFilters: state.filters,
+            showColumnFilters: state.showColumnFilters,
+            showGlobalFilter: state.showGlobalFilter,
+        },
+        onColumnVisibilityChange: (updater) => {
+            setState(prev => ({ ...prev, columnVisibility: typeof updater === 'function' ? updater(prev.columnVisibility) : updater }));
+        },
+        onSortingChange: (updater) => {
+            setState(prev => ({ ...prev, sorting: typeof updater === 'function' ? updater(prev.sorting) : updater }));
+        },
+        onColumnFiltersChange: (updater) => {
+            setState(prev => ({ ...prev, filters: typeof updater === 'function' ? updater(prev.filters) : updater }));
+        },
+        onShowColumnFiltersChange: (value) => {
+            setState(prev => ({
+                ...prev,
+                showColumnFilters: typeof value === 'function' ? value(prev.showColumnFilters) : value
+            }));
+        },
+        onShowGlobalFilterChange: (value) => {
+            setState(prev => ({
+                ...prev,
+                showGlobalFilter: typeof value === 'function' ? value(prev.showGlobalFilter) : value
+            }));
         },
     });
 
@@ -411,6 +401,5 @@ const UnitTable = () => {
             )}
         </>
     );
-};
-
+}
 export default UnitTable;
