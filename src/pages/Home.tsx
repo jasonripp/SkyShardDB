@@ -71,7 +71,7 @@ const Home: React.FC = () => {
             </Box>
 
             <Grid container spacing={3} justifyContent="center">
-                <Grid size={{ xs: 12, md: 6 }}>
+                <Grid size={{ xs: 12, md: 4 }}>
                     <Card sx={{ height: '100%' }}>
                         <CardContent>
                             <Typography variant="h5" component="h2" gutterBottom>
@@ -91,7 +91,7 @@ const Home: React.FC = () => {
                     </Card>
                 </Grid>
 
-                <Grid size={{ xs: 12, md: 6 }}>
+                <Grid size={{ xs: 12, md: 4 }}>
                     <Card sx={{ height: '100%' }}>
                         <CardContent>
                             <Typography variant="h5" component="h2" gutterBottom>
@@ -111,7 +111,7 @@ const Home: React.FC = () => {
                     </Card>
                 </Grid>
 
-                <Grid size={{ xs: 12, md: 6 }}>
+                <Grid size={{ xs: 12, md: 4 }}>
                     <Card sx={{ height: '100%' }}>
                         <CardContent>
                             <Typography variant="h5" component="h2" gutterBottom>
