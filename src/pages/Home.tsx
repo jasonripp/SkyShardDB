@@ -31,7 +31,7 @@ const Home: React.FC = () => {
                 </Typography>
             </Box>
 
-            <Box>
+            <Box sx={{ mb: 4 }}>
                 <Paper elevation={2} sx={{ p: 3 }}>
                     <Box textAlign="center" mb={2}>
                         <img src={logoSrc} style={{ maxWidth: "100%" }} alt="logo" />
@@ -69,6 +69,68 @@ const Home: React.FC = () => {
                     </Typography>
                 </Paper>
             </Box>
+
+            <Grid container spacing={3} justifyContent="center">
+                <Grid size={{ xs: 12, md: 6 }}>
+                    <Card sx={{ height: '100%' }}>
+                        <CardContent>
+                            <Typography variant="h5" component="h2" gutterBottom>
+                                Unit Database
+                            </Typography>
+                            <Typography variant="body1" component="p" gutterBottom>
+                                View, filter, and sort detailed the stats, information, and attributes of all units in SkyShard.
+                            </Typography>
+                            <Button
+                                variant="contained"
+                                onClick={() => navigate('/units')}
+                                fullWidth
+                            >
+                                View Units
+                            </Button>
+                        </CardContent>
+                    </Card>
+                </Grid>
+
+                <Grid size={{ xs: 12, md: 6 }}>
+                    <Card sx={{ height: '100%' }}>
+                        <CardContent>
+                            <Typography variant="h5" component="h2" gutterBottom>
+                                Enchantment Database
+                            </Typography>
+                            <Typography variant="body1" component="p" gutterBottom>
+                                View enchantment data and effects (Coming Soon).
+                            </Typography>
+                            <Button
+                                variant="contained"
+                                onClick={() => navigate('/enchantments')}
+                                fullWidth
+                            >
+                                View Enchantments
+                            </Button>
+                        </CardContent>
+                    </Card>
+                </Grid>
+
+                <Grid size={{ xs: 12, md: 6 }}>
+                    <Card sx={{ height: '100%' }}>
+                        <CardContent>
+                            <Typography variant="h5" component="h2" gutterBottom>
+                                Encounter Database
+                            </Typography>
+                            <Typography variant="body1" component="p" gutterBottom>
+                                View encounter data including shops and quests (Coming Soon).
+                            </Typography>
+                            <Button
+                                variant="contained"
+                                onClick={() => navigate('/encounters')}
+                                fullWidth
+                            >
+                                View Encounters
+                            </Button>
+                        </CardContent>
+                    </Card>
+                </Grid>
+            </Grid>
         </Container>
     );
 };

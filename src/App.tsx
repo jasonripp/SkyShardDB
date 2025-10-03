@@ -31,10 +31,10 @@ function App() {
 
   const buildDate = new Date(import.meta.env.VITE_APP_BUILD_DATE).toLocaleString('en-US', {
     year: 'numeric',
-    month: 'long',
+    month: 'short',
     day: 'numeric',
-    hour: '2-digit',
-    minute: '2-digit',
+    // hour: '2-digit',
+    // minute: '2-digit',
   });
 
   return (
@@ -54,13 +54,13 @@ function App() {
         
         <Box sx={{ p: 1, textAlign: 'center', borderTop: 1, borderColor: 'divider' }}>
           <Typography variant="caption">
-            Last built: {buildDate || "unknown"}
+            Updated: {buildDate || "unknown"}
           </Typography>
           <Typography variant="caption" sx={{ mx: 2 }}>
             |
           </Typography>
           <Typography variant="caption">
-            &copy; 2025 by Araym. All rights reserved
+            &copy; 2025 by Araym.
           </Typography>
         </Box>
       </Box>
