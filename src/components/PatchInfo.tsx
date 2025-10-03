@@ -78,8 +78,8 @@ const PatchInfo = () => {
 
     return (
         <React.Fragment>
-            <Typography variant='body2' gutterBottom>
-                Game version: {patchData?.Patch} - <Link component="button" onClick={handleClickOpen}>Patch Notes</Link>
+            <Typography variant='body1' gutterBottom>
+                <strong>Game Version:</strong> {patchData?.Patch} - <Link component="button" onClick={handleClickOpen}>View Patch Notes</Link>
             </Typography>
             <BootstrapDialog
                 onClose={handleClose}

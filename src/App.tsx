@@ -11,6 +11,7 @@ import Typography from '@mui/material/Typography';
 import Navigation from './components/Navigation';
 import Home from './pages/Home';
 import UnitsPage from './pages/UnitsPage';
+import EnchantmentsPage from './pages/Enchantments';
 import EncountersPage from './pages/EncountersPage';
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/units" element={<UnitsPage />} />
+            <Route path="/enchantments" element={<EnchantmentsPage />} />
             <Route path="/encounters" element={<EncountersPage />} />
           </Routes>
         </Box>
@@ -53,6 +55,12 @@ function App() {
         <Box sx={{ p: 1, textAlign: 'center', borderTop: 1, borderColor: 'divider' }}>
           <Typography variant="caption">
             Last built: {buildDate || "unknown"}
+          </Typography>
+          <Typography variant="caption" sx={{ mx: 2 }}>
+            |
+          </Typography>
+          <Typography variant="caption">
+            &copy; 2025 by Araym. All rights reserved
           </Typography>
         </Box>
       </Box>
